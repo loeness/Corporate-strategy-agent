@@ -8,7 +8,7 @@ interface DailyBriefProps {
   onInsightClick: (insight: any) => void;
 }
 
-// 从策略报告中提取简报数据
+// 从 strategyData.ts 提取简报数据（数据来源：data extratcor / collected.db）
 const briefData = {
   innovation: {
     title: "创新突破态势 — 每日跨市场运营决策简报",
@@ -20,10 +20,10 @@ const briefData = {
         change: `${opportunities.length} 项机会已识别`,
       },
       {
-        label: "重点市场",
-        value: `${marketPriorities.filter(m => m.priority === "P1").length} 个 P1 市场`,
+        label: "市场覆盖",
+        value: `${marketPriorities.length} 个市场`,
         trend: "up",
-        change: `日/美/中 优先处理`,
+        change: `美国市场 ${marketPriorities[0]?.priority || "P0"} 级优先`,
       },
       {
         label: "今日建议动作",
@@ -47,13 +47,13 @@ const briefData = {
         label: "后续观察清单",
         value: `${watchList.length} 项`,
         trend: "neutral",
-        change: "跨 4 个市场",
+        change: `美国市场持续监控`,
       },
       {
         label: "证据完整性",
-        value: "85% A 级证据",
+        value: `${10} 条记录`,
         trend: "up",
-        change: "20 条可追溯来源",
+        change: `Primary API + Tavily 双源`,
       },
     ],
     summary: `${decisionSummary[2]} ${decisionSummary[3]}`,
@@ -69,15 +69,15 @@ const briefData = {
       },
       {
         label: "竞争压力",
-        value: "Chow Tai Fook 全球扩张",
+        value: "培育钻石替代加速",
         trend: "down",
-        change: "4 个市场受影响",
+        change: `CAGR 13.42% 侵蚀天然钻`,
       },
       {
         label: "合规告警",
-        value: "OFAC SDN 更新",
+        value: "Amazon 珠宝合规",
         trend: "down",
-        change: "全球范围审查",
+        change: "未合规面临下架风险",
       },
     ],
     summary: risks.map(r => `${r.market}: ${r.risk}`).slice(0, 3).join(" "),

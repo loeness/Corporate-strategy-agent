@@ -7,92 +7,93 @@ interface InsightDetailModalProps {
   onFrameworkClick: (framework: string) => void;
 }
 
-// 简报项与战略框架的关联映射
+// 简报项与战略框架的关联映射（基于 collected.db 实际数据）
 const insightFrameworkMapping: Record<string, any> = {
   // 创新突破模式
-  "新兴市场机会": {
+  "P0 机会数": {
     frameworks: [
-      { id: "pestle", name: "PESTLE 分析", relevance: 95, keyPoint: "社会趋势：Z世代消费崛起", reason: "年轻消费者偏好个性化定制，市场机会点集中" },
-      { id: "porter", name: "波特五力", relevance: 88, keyPoint: "新进入者威胁提升", reason: "市场进入壁垒降低，为创新者提供机会" },
-      { id: "strategic-group", name: "战略群组", relevance: 92, keyPoint: "创新科技群组快速崛起", reason: "科技驱动品牌年增长率超40%" },
+      { id: "pestle", name: "PESTLE 分析", relevance: 92, keyPoint: "社会趋势：雕塑银饰 + 有意义的奢侈", reason: "多源确认 2026 主流趋势，消费者从产品目录转向价值观叙事" },
+      { id: "porter", name: "波特五力", relevance: 88, keyPoint: "替代品威胁：培育钻石 CAGR 13.42%", reason: "实验室培育钻石 $335.4 亿市场重新定义「有价值的珠宝」" },
+      { id: "swot", name: "SWOT 分析", relevance: 90, keyPoint: "机会：四大创新方向强证据支撑", reason: "银饰/培育钻/男士珠宝/色彩宝石均有多源确认" },
     ],
-    dataSources: 18,
-    summary: "基于 PESTLE 社会维度分析、波特五力新进入者分析和战略群组创新群组评估，综合识别出 8 个具有突破潜力的市场机会点。"
+    dataSources: 10,
+    summary: "基于 PESTLE 社会趋势分析、波特五力替代品威胁评估和 SWOT 机会矩阵，从 collected.db 306 条市场趋势中识别出 10 个 P0 级创新机会，覆盖银饰/培育钻/男士珠宝/色彩宝石四大方向。"
   },
-  "技术创新指数": {
+  "市场覆盖": {
     frameworks: [
-      { id: "pestle", name: "PESTLE 分析", relevance: 98, keyPoint: "技术突破：区块链溯源", reason: "数字溯源技术成熟度提升，消费者信任度大幅提高" },
-      { id: "value-chain", name: "价值链分析", relevance: 94, keyPoint: "AI辅助设计", reason: "生成式AI工具缩短设计周期60%" },
-      { id: "swot", name: "SWOT 分析", relevance: 90, keyPoint: "机会：技术赋能", reason: "新技术可重构竞争优势，开辟蓝海市场" },
+      { id: "pestle", name: "PESTLE 分析", relevance: 85, keyPoint: "8 个市场宏观环境差异", reason: "US/CN/JP/KR/SG/MY/TH/VN 各市场政策、经济、社会维度差异显著" },
+      { id: "strategic-group", name: "战略群组", relevance: 90, keyPoint: "四层群组分化", reason: "奢侈品群组稳固 / 培育钻群组快速增长 / 可持续群组新兴 / 传统中端受挤压" },
+      { id: "value-chain", name: "价值链分析", relevance: 82, keyPoint: "分销渠道覆盖不均", reason: "电商维度 CN 200 条 vs US 61 条，东南亚电商数据丰富但需本地化落地" },
     ],
-    dataSources: 25,
-    summary: "综合 PESTLE 技术维度、价值链创新环节和 SWOT 技术机会评估，技术创新指数达到 87/100，投资回报率持续提升。"
+    dataSources: 8,
+    summary: "基于 PESTLE 宏观环境、战略群组市场分层和价值链分销分析，8 个市场数据采集完成度：CN 1,288 条 / JP 1,166 条 / US 818 条 / KR 903 条 / VN 684 条 / SG 595 条 / MY 590 条 / TH 584 条。"
   },
-  "竞争差异化": {
+  "今日建议动作": {
     frameworks: [
-      { id: "porter", name: "波特五力", relevance: 91, keyPoint: "行业竞争强度分析", reason: "创新成为差异化关键" },
-      { id: "strategic-group", name: "战略群组", relevance: 95, keyPoint: "创新科技群组定位", reason: "与传统群组形成明显差异" },
-      { id: "swot", name: "SWOT 分析", relevance: 87, keyPoint: "优势：品牌积淀", reason: "创新可强化现有优势" },
+      { id: "value-chain", name: "价值链分析", relevance: 93, keyPoint: "从合规到营销的全链路行动", reason: "OFAC 审查（合规端）→ 产品开发（设计端）→ 社交内容（营销端）" },
+      { id: "swot", name: "SWOT 分析", relevance: 88, keyPoint: "优势转化行动", reason: "趋势感知能力需快速转化为产品开发和营销执行力" },
+      { id: "pestle", name: "PESTLE 分析", relevance: 80, keyPoint: "合规与技术窗口", reason: "Amazon 珠宝合规收紧创造准入壁垒窗口" },
     ],
-    dataSources: 16,
-    summary: "基于波特五力竞争分析、战略群组差异化定位和 SWOT 优势评估，竞争差异化优势扩大 5%。"
+    dataSources: 8,
+    summary: "基于价值链全链路分析、SWOT 优势转化和 PESTLE 合规窗口评估，8 项建议动作中 3 项为 24 小时内紧急（OFAC 审查/合规核查/Coupang 转换），5 项为本周至本月内执行。"
   },
 
   // 稳定运营模式
-  "运营效率": {
+  "风险监控项": {
     frameworks: [
-      { id: "value-chain", name: "价值链分析", relevance: 96, keyPoint: "生产效率与采购优化", reason: "产能利用率稳定在85%，成本下降2%" },
-      { id: "pestle", name: "PESTLE 分析", relevance: 82, keyPoint: "经济与技术环境稳定", reason: "宏观环境利于运营优化" },
-      { id: "swot", name: "SWOT 分析", relevance: 88, keyPoint: "优势：规模效应", reason: "成本结构优于行业平均" },
+      { id: "pestle", name: "PESTLE 分析", relevance: 90, keyPoint: "政策合规与宏观风险", reason: "OFAC SDN 全市场更新 / Amazon 珠宝合规收紧 / Walmart 珠宝政策更新" },
+      { id: "porter", name: "波特五力", relevance: 85, keyPoint: "竞争威胁评估", reason: "CTF 全球扩张 / 培育钻石蚕食 / Cartier 涨价 / Laopu Gold 品牌化" },
+      { id: "swot", name: "SWOT 分析", relevance: 88, keyPoint: "威胁与劣势监控", reason: "11 项风险中 6 项 P0 级（OFAC/Amazon 合规/CTF 扩张/Coupang/Cartier/Poh Kong）" },
     ],
-    dataSources: 22,
-    summary: "综合价值链效率分析、宏观环境评估和规模优势评估，运营效率达到 92%，同比提升 2%。"
+    dataSources: 11,
+    summary: "基于 PESTLE 政策合规维度、波特五力竞争威胁和 SWOT 风险矩阵，从 collected.db 全维度数据中识别出 11 项风险（6 项 P0 / 5 项 P1），覆盖合规/竞争/价格/市场结构/平台政策五大类别。"
   },
-  "成本控制": {
+  "后续观察清单": {
     frameworks: [
-      { id: "value-chain", name: "价值链分析", relevance: 94, keyPoint: "采购优化与物流优化", reason: "集中采购规模效应显现，库存周转率提升" },
-      { id: "porter", name: "波特五力", relevance: 78, keyPoint: "供应商关系稳固", reason: "长期合作关系降低采购成本" },
+      { id: "pestle", name: "PESTLE 分析", relevance: 82, keyPoint: "宏观环境持续监测", reason: "金价 $145/g 单日波动超 2% 触发定价评估 / 日本关税调整 / 各国平台政策变化" },
+      { id: "value-chain", name: "价值链分析", relevance: 88, keyPoint: "全链路监控点", reason: "采购端（金价）→ 合规端（Amazon/Walmart）→ 渠道端（Coupang）→ 竞争端（CTF 门店客流）" },
+      { id: "swot", name: "SWOT 分析", relevance: 85, keyPoint: "机会窗口监控", reason: "男士珠宝搜索量 / 培育钻石搜索量 / 竞品促销价格带变化均设触发阈值" },
     ],
-    dataSources: 15,
-    summary: "基于价值链成本环节和供应商议价分析，成本控制措施有效，正在持续优化中。"
+    dataSources: 8,
+    summary: "基于 PESTLE 宏观监测、价值链全链路触发条件和 SWOT 机会窗口，8 项观察清单覆盖 US/CN/KR/JP/东南亚，每项设明确触发条件（如金价波动 >2%、搜索量增长 >20%），自动升级为行动项。"
   },
-  "风险指标": {
+  "证据完整性": {
     frameworks: [
-      { id: "pestle", name: "PESTLE 分析", relevance: 85, keyPoint: "政策与经济稳定性", reason: "宏观风险可控" },
-      { id: "porter", name: "波特五力", relevance: 80, keyPoint: "竞争格局稳定", reason: "行业竞争有序" },
-      { id: "swot", name: "SWOT 分析", relevance: 88, keyPoint: "威胁评估", reason: "外部威胁较低" },
+      { id: "pestle", name: "PESTLE 分析", relevance: 88, keyPoint: "数据源可信度分层", reason: "Primary API（conf=1.0）423 条 vs Tavily Search（conf=0.7）4,251 条" },
+      { id: "value-chain", name: "价值链分析", relevance: 85, keyPoint: "信息流质量评估", reason: "竞品维度 60%+ 噪音率 / 地缘政治有效信号稀疏 / social_media 全部为 Tavily" },
+      { id: "swot", name: "SWOT 分析", relevance: 90, keyPoint: "数据优势与劣势", reason: "价格/FX/OFAC 全 Primary API（优势）vs 竞品噪音率高/东南亚 Tavily 覆盖不足（劣势）" },
     ],
-    dataSources: 19,
-    summary: "综合 PESTLE 风险评估、波特竞争分析和 SWOT 威胁评估，整体风险指标为低风险，下降 3 点。"
+    dataSources: 30,
+    summary: "基于 PESTLE 数据源可信度、价值链信息流和 SWOT 数据基础评估，collected.db 共 4,674 条记录。A 级证据 30 条（价格/FX/OFAC/Richemont/Pandora），B 级证据来自 Tavily。竞品噪音率 60%+、地缘政治噪音率高为当前数据质量最大瓶颈。"
   },
 
   // 拯救者模式
-  "关键风险点": {
+  "P0 风险点": {
     frameworks: [
-      { id: "pestle", name: "PESTLE 分析", relevance: 93, keyPoint: "监管与经济压力", reason: "外部环境存在多重压力点" },
-      { id: "porter", name: "波特五力", relevance: 96, keyPoint: "多重竞争压力", reason: "价格战侵蚀利润，客户流失加速" },
-      { id: "swot", name: "SWOT 分析", relevance: 98, keyPoint: "生存威胁", reason: "现金流与市场双重压力" },
+      { id: "pestle", name: "PESTLE 分析", relevance: 95, keyPoint: "OFAC 制裁 + Amazon 合规双重压力", reason: "OFAC SDN 全市场拉取（conf=1.0）需 24 小时内审查 / Amazon 珠宝合规未完成即下架" },
+      { id: "porter", name: "波特五力", relevance: 92, keyPoint: "CTF 东南亚扩张 + 培育钻石替代", reason: "CTF 新加坡/曼谷/杭州三线扩张 / 培育钻石 $335.4 亿侵蚀天然钻价格体系" },
+      { id: "swot", name: "SWOT 分析", relevance: 90, keyPoint: "K 型分化 + 金价高位双重挤压", reason: "中端产品线需求萎缩（ucfs.net）+ 金价 $145/g 压利润" },
     ],
-    dataSources: 28,
-    summary: "基于 PESTLE 外部风险、波特竞争压力和 SWOT 威胁评估，识别 5 个需关注的关键风险点，较上期减少 2 个。"
+    dataSources: 6,
+    summary: "基于 PESTLE 监管风险、波特五力竞争替代压力和 SWOT 生存威胁评估，11 项风险中 6 项为 P0 级（OFAC/Amazon 合规/CTF 扩张/Coupang/Cartier 涨价/Poh Kong），需总部级响应。"
   },
-  "应对措施进展": {
+  "竞争压力": {
     frameworks: [
-      { id: "value-chain", name: "价值链分析", relevance: 92, keyPoint: "成本削减与效率提升", reason: "紧急优化措施正在实施" },
-      { id: "strategic-group", name: "战略群组", relevance: 86, keyPoint: "战略转型方向", reason: "向更健康的群组迁移" },
-      { id: "swot", name: "SWOT 分析", relevance: 88, keyPoint: "改革窗口期", reason: "危机倒逼转型，快速试错" },
+      { id: "porter", name: "波特五力", relevance: 96, keyPoint: "培育钻石替代加速 (CAGR 13.42%)", reason: "培育钻石 DTC 品牌通过社交媒体直触消费者，传统渠道优势被削弱" },
+      { id: "strategic-group", name: "战略群组", relevance: 90, keyPoint: "传统中端群组双向挤压", reason: "高端群组（Cartier/Tiffany）稳固 + 培育钻群组快速增长 + K 型消费分化" },
+      { id: "swot", name: "SWOT 分析", relevance: 85, keyPoint: "竞争劣势：噪音率 60%+", reason: "竞品情报 2,936 条中仅 25 条 Primary API 为有效信号，决策信息基础薄弱" },
     ],
-    dataSources: 24,
-    summary: "综合价值链优化进度、战略转型路径和改革机会评估，应对措施完成度达 68%，提升 15%。"
+    dataSources: 7,
+    summary: "基于波特五力竞争结构分析、战略群组定位和 SWOT 劣势评估，培育钻石替代 + CTF 全球扩张 + 本土品牌高端化三重竞争压力叠加，中端市场面临结构性挤压。"
   },
-  "恢复健康度": {
+  "合规告警": {
     frameworks: [
-      { id: "porter", name: "波特五力", relevance: 84, keyPoint: "竞争态势变化", reason: "部分压力得到缓解" },
-      { id: "value-chain", name: "价值链分析", relevance: 90, keyPoint: "运营效率改善", reason: "成本控制见效" },
-      { id: "swot", name: "SWOT 分析", relevance: 88, keyPoint: "优势重建", reason: "核心能力正在恢复" },
+      { id: "pestle", name: "PESTLE 分析", relevance: 98, keyPoint: "全球合规压力集中爆发", reason: "OFAC SDN（8 市场）/ Amazon 珠宝合规（US）/ Walmart 政策（US）/ 日本 71 条合规记录" },
+      { id: "value-chain", name: "价值链分析", relevance: 92, keyPoint: "合规端为当前最大瓶颈", reason: "Amazon 材料文档+铅测试+贵金属验证 / FBA Prep 服务终止 / 日本关税+进口规则变动" },
+      { id: "porter", name: "波特五力", relevance: 78, keyPoint: "合规壁垒提高进入门槛", reason: "不合规竞品退出释放市场份额，但短期合规成本显著上升" },
     ],
-    dataSources: 21,
-    summary: "基于竞争态势监测、运营效率追踪和优势重建评估，恢复健康度改善中，提升 8 点。"
+    dataSources: 5,
+    summary: "基于 PESTLE 监管维度、价值链合规环节和波特五力进入壁垒分析，OFAC 审查（24h 内）+ Amazon 合规（本周内）+ Coupang 转型（本周内）为当前最高优先级合规事项，延误将直接导致下架/冻结/流量损失。"
   },
 };
 

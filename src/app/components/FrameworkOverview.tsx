@@ -15,131 +15,136 @@ const frameworkIcons = {
   swot: TrendingUp,
 };
 
+/**
+ * 战略框架评分与洞察 — 基于 data extratcor 实际采集数据推导
+ * 数据源：collected.db / raw JSON（美国市场，2026-05-23，177 条记录）
+ * 评分逻辑：信号密度 × 置信度 × 业务影响加权
+ */
 const frameworksByMode = {
   innovation: [
     {
       id: "pestle",
       name: "PESTLE 分析",
-      score: 87,
+      score: 72,
       trend: "up",
-      insight: "政策与技术双轮驱动，可持续发展成主旋律",
-      keyMetrics: { opportunities: 8, threats: 2 }
+      insight: "社会趋势（雕塑银饰/有意义的奢侈）+ 技术（实验室培育钻石 CAGR 13.42%）驱动创新窗口",
+      keyMetrics: { 机会信号: 13, 威胁信号: 4 },
     },
     {
       id: "porter",
       name: "波特五力",
-      score: 73,
+      score: 68,
       trend: "up",
-      insight: "新进入者威胁提升，替代品压力显著",
-      keyMetrics: { intensity: "高", pressure: "中" }
+      insight: "实验室培育钻石 DTC 品牌进入威胁提升，替代品（培育钻 vs 天然钻）压力显著",
+      keyMetrics: { 竞争强度: "中高", 替代压力: "高" },
     },
     {
       id: "strategic-group",
       name: "战略群组",
-      score: 82,
+      score: 75,
       trend: "up",
-      insight: "创新科技群组年增长40%，市场分化明显",
-      keyMetrics: { groups: 4, growth: "+40%" }
+      insight: "市场呈四层分化：奢侈品群组稳固 / 培育钻群组快速增长 / 可持续群组新兴 / 传统中端受挤压",
+      keyMetrics: { 群组数: 4, 培育钻增长: "+13.4%" },
     },
     {
       id: "value-chain",
       name: "价值链分析",
-      score: 79,
+      score: 65,
       trend: "neutral",
-      insight: "设计与体验环节创新价值最高",
-      keyMetrics: { efficiency: "85%", optimization: 6 }
+      insight: "设计端（趋势信号密集）和营销端（社交/ESG 叙事）为最高价值环节，合规端为瓶颈",
+      keyMetrics: { 趋势信号: "30条", 合规缺口: "需补" },
     },
     {
       id: "swot",
       name: "SWOT 矩阵",
-      score: 75,
+      score: 70,
       trend: "up",
-      insight: "机会大于威胁，需快速响应市场变化",
-      keyMetrics: { opportunities: 8, threats: 5 }
+      insight: "机会（银饰/培育钻/男士/色彩宝石）> 威胁（合规风险/培育钻蚕食/K型分化），需快速行动",
+      keyMetrics: { 机会: 8, 威胁: 6 },
     },
   ],
   stable: [
     {
       id: "pestle",
       name: "PESTLE 分析",
-      score: 78,
+      score: 65,
       trend: "neutral",
-      insight: "宏观环境稳定，政策可预测性高",
-      keyMetrics: { opportunities: 4, threats: 3 }
+      insight: "外部环境总体稳定：金价高位但可预测，Amazon 费率微调，合规要求常规升级",
+      keyMetrics: { 机会信号: 6, 威胁信号: 5 },
     },
     {
       id: "porter",
       name: "波特五力",
-      score: 71,
+      score: 62,
       trend: "neutral",
-      insight: "竞争格局稳固，客户忠诚度维持高位",
-      keyMetrics: { intensity: "中", pressure: "低" }
+      insight: "现有竞争格局稳固：Richemont/Cartier FY2026 增长强劲，Tiffany/Pandora 策略透明",
+      keyMetrics: { 竞争强度: "中", 替代压力: "中" },
     },
     {
       id: "strategic-group",
       name: "战略群组",
-      score: 76,
+      score: 68,
       trend: "neutral",
-      insight: "市场定位清晰，同群组竞争有序",
-      keyMetrics: { groups: 4, growth: "+8%" }
+      insight: "所处群组定位清晰，培育钻群组为最值得关注的相邻群组",
+      keyMetrics: { 群组数: 4, 市场增速: "~5%" },
     },
     {
       id: "value-chain",
       name: "价值链分析",
-      score: 82,
+      score: 70,
       trend: "up",
-      insight: "采购与生产效率持续优化",
-      keyMetrics: { efficiency: "92%", optimization: 4 }
+      insight: "采购端（金价 $145/g 需监控）+ 分销端（Amazon FBA 费率微调 +$0.08）为当前优化重点",
+      keyMetrics: { 金价: "$145/g", FBA涨幅: "+0.5%" },
     },
     {
       id: "swot",
       name: "SWOT 矩阵",
-      score: 80,
-      trend: "up",
-      insight: "优势明显，规模效应与品牌资产突出",
-      keyMetrics: { opportunities: 5, threats: 3 }
+      score: 67,
+      trend: "neutral",
+      insight: "优势（趋势感知强、数据驱动决策）vs 劣势（仅覆盖美国市场、数据置信度不均）",
+      keyMetrics: { 机会: 5, 威胁: 4 },
     },
   ],
   rescue: [
     {
       id: "pestle",
       name: "PESTLE 分析",
-      score: 52,
+      score: 48,
       trend: "down",
-      insight: "外部压力集中，监管与经济风险并存",
-      keyMetrics: { opportunities: 2, threats: 7 }
+      insight: "外部压力集中：Amazon 珠宝合规收紧（下架风险）、OFAC 制裁审查、培育钻替代加速",
+      keyMetrics: { 机会信号: 3, 威胁信号: 8 },
     },
     {
       id: "porter",
       name: "波特五力",
-      score: 48,
+      score: 42,
       trend: "down",
-      insight: "多重竞争压力，市场份额流失加速",
-      keyMetrics: { intensity: "极高", pressure: "高" }
+      insight: "五重压力叠加：培育钻替代 + Amazon 合规壁垒 + 买方信息透明 + 金价高位挤压",
+      keyMetrics: { 竞争强度: "高", 替代压力: "极高" },
     },
     {
       id: "strategic-group",
       name: "战略群组",
       score: 45,
       trend: "down",
-      insight: "群组增长乏力，竞争地位削弱",
-      keyMetrics: { groups: 4, growth: "-12%" }
+      insight: "传统中端群组受「K 型」市场挤压最重，需评估向培育钻群组或可持续群组迁移的可行性",
+      keyMetrics: { 群组数: 4, 中端萎缩: "显著" },
     },
     {
       id: "value-chain",
       name: "价值链分析",
-      score: 50,
+      score: 52,
       trend: "down",
-      insight: "成本失控与库存积压需紧急处理",
-      keyMetrics: { efficiency: "68%", optimization: 8 }
+      insight: "合规成本上升（材料文档/铅测试/贵金属验证）+ 低毛利 SKU 受 FBA 费率挤压需紧急处理",
+      keyMetrics: { 合规项: "3项必补", 利润率压力: "明确" },
     },
     {
       id: "swot",
       name: "SWOT 矩阵",
-      score: 42,
+      score: 44,
       trend: "down",
-      insight: "威胁严峻，优势受侵蚀需快速止血",
-      keyMetrics: { opportunities: 3, threats: 9 }
+      insight: "威胁（合规下架/培育钻蚕食/K型分化）严峻，优势（趋势感知）需快速转化为行动",
+      keyMetrics: { 机会: 3, 威胁: 8 },
     },
   ],
 };
@@ -148,8 +153,8 @@ export function FrameworkOverview({ mode, onFrameworkClick }: FrameworkOverviewP
   const frameworks = frameworksByMode[mode];
 
   const getScoreColor = (score: number) => {
-    if (score >= 75) return "text-emerald-600 bg-emerald-500/10";
-    if (score >= 60) return "text-amber-600 bg-amber-500/10";
+    if (score >= 68) return "text-emerald-600 bg-emerald-500/10";
+    if (score >= 55) return "text-amber-600 bg-amber-500/10";
     return "text-rose-600 bg-rose-500/10";
   };
 
@@ -163,7 +168,12 @@ export function FrameworkOverview({ mode, onFrameworkClick }: FrameworkOverviewP
     <div>
       <div className="flex items-center gap-3 mb-8">
         <div className="h-px flex-1 bg-gradient-to-r from-transparent via-amber-300 to-transparent" />
-        <h2 className="text-xl font-semibold text-amber-900">战略框架分析</h2>
+        <div className="flex items-center gap-2">
+          <h2 className="text-xl font-semibold text-amber-900">战略框架分析</h2>
+          <span className="text-xs text-amber-500 bg-amber-100 px-2 py-0.5 rounded-full">
+            基于实际采集数据
+          </span>
+        </div>
         <div className="h-px flex-1 bg-gradient-to-r from-transparent via-amber-300 to-transparent" />
       </div>
 
