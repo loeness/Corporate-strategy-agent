@@ -57,6 +57,15 @@ const insightFrameworkMapping: Record<string, any> = {
     dataSources: 8,
     summary: "基于 PESTLE 宏观监测、价值链全链路触发条件和 SWOT 机会窗口，8 项观察清单覆盖 US/CN/KR/JP/东南亚，每项设明确触发条件（如金价波动 >2%、搜索量增长 >20%），自动升级为行动项。"
   },
+  "建议动作": {
+    frameworks: [
+      { id: "value-chain", name: "价值链分析", relevance: 92, keyPoint: "合规+渠道+竞品全链路运营动作", reason: "OFAC 审查（合规端）→ Amazon/FBA 费率调整（渠道端）→ Coupang 政策应对（物流端）→ 竞品监控（市场端）" },
+      { id: "porter", name: "波特五力", relevance: 88, keyPoint: "竞品对标驱动的防御性动作", reason: "老凤祥/六福珠宝春季新品对标 + 周大福东南亚扩张跟踪，保持竞争态势感知" },
+      { id: "swot", name: "SWOT 分析", relevance: 86, keyPoint: "运营稳健性修补与风险防控", reason: "7 项动作同步覆盖合规修补（W）和渠道成本优化（T），多市场并行推进" },
+    ],
+    dataSources: 7,
+    summary: "基于价值链全链路、波特五力竞品对标和 SWOT 运营稳健性分析，7 项建议动作均为本周紧急（OFAC 审查/Amazon JP 费率/FBA 配送费/珠宝合规/Coupang 政策/竞品监控/周大福跟踪），覆盖合规、渠道、物流和竞品四大运营维度。"
+  },
   "证据完整性": {
     frameworks: [
       { id: "pestle", name: "PESTLE 分析", relevance: 88, keyPoint: "数据源可信度分层", reason: "Primary API（conf=1.0）423 条 vs Tavily Search（conf=0.7）4,251 条" },
@@ -94,6 +103,15 @@ const insightFrameworkMapping: Record<string, any> = {
     ],
     dataSources: 5,
     summary: "基于 PESTLE 监管维度、价值链合规环节和波特五力进入壁垒分析，OFAC 审查（24h 内）+ Amazon 合规（本周内）+ Coupang 转型（本周内）为当前最高优先级合规事项，延误将直接导致下架/冻结/流量损失。"
+  },
+  "转型动作": {
+    frameworks: [
+      { id: "value-chain", name: "价值链分析", relevance: 94, keyPoint: "合规+渠道+供应链全链路转型", reason: "OFAC 审查（合规端）→ Amazon 费率重算（渠道端）→ Coupang CLS 迁移（物流端）→ 趋势产品设计（产品端）" },
+      { id: "porter", name: "波特五力", relevance: 90, keyPoint: "竞品对标驱动竞争策略转型", reason: "老凤祥/六福珠宝对标分析 + 周大福东南亚扩张研判，从被动应对转向主动布局" },
+      { id: "swot", name: "SWOT 分析", relevance: 86, keyPoint: "劣势修补与趋势机会捕捉", reason: "7 项动作同步推进合规修补（W）和 2026 设计趋势机会（O），覆盖全球 5+ 市场" },
+    ],
+    dataSources: 7,
+    summary: "基于价值链全链路、波特五力竞争对标和 SWOT 劣势修补与机会捕捉分析，7 项转型动作中 5 项为本周紧急（OFAC 审查/竞品对标/周大福研判/Amazon JP 费率/Coupang CLS），覆盖合规、渠道、供应链和产品设计四大转型方向。"
   },
 };
 
