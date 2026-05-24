@@ -1,20 +1,18 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Search, Filter, ExternalLink, Calendar, Tag } from "lucide-react";
+import { Search, Filter, ExternalLink, Tag } from "lucide-react";
 import type { StrategyMode } from "./StrategyModeSelector";
-import { evidenceRecords, type EvidenceRecord } from "../data/strategyData";
+import { getStrategyData, type EvidenceRecord } from "../data/strategyData";
 
 interface DataSourcesProps {
   mode: StrategyMode;
 }
 
-const dataItems: EvidenceRecord[] = evidenceRecords.map((r) => ({
-  ...r,
-}));
-
 export function DataSources({ mode }: DataSourcesProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+
+  const dataItems: EvidenceRecord[] = getStrategyData(mode).evidenceRecords;
 
   const allCategories = Array.from(new Set(dataItems.map((i) => i.category || "其他")));
 
@@ -78,7 +76,7 @@ export function DataSources({ mode }: DataSourcesProps) {
           <span className="text-sm text-amber-700">B 级：<strong>{dataItems.filter(i => i.evidenceLevel === "B").length}</strong></span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-xs text-amber-500">来源：data/strategy_report.md</span>
+          <span className="text-xs text-amber-500">来源：策略报告</span>
         </div>
       </div>
 

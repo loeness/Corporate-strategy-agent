@@ -1,0 +1,636 @@
+# 每日跨市场运营决策与策略判断报告（稳健运营方向）
+
+## 优先级说明
+P0 = 今日必须处理；P1 = 本周处理；P2 = 观察；P3 = 归档。
+证据等级：A = 证据完整可直接讨论；B = 有来源但需补 URL；C = 证据较弱；D = 必须人工确认。
+
+## 一、决策摘要
+报告取向：稳健运营方向
+判断口径：优先保障毛利、库存、合规、平台规则、履约成本、供应链和日常经营稳定性。
+
+1. 全球SDN清单需总部合规部统一解析并通知各区，避免跨境交易制裁风险
+2. 日本Amazon费用及关税变化将直接影响毛利，区域须立即核算各SKU损益并调整运营策略
+3. 美国Amazon品类合规和FBA费用更新要求区域前置准备材料并优化物流方案
+4. 金价高位震荡，总部商品部应建立熔断机制，各区开展轻量化商品测试以维持毛利
+
+## 二、市场优先级一览
+- 第 1 位：日本
+  - 优先级：P0
+  - 判断：Amazon推荐费上涨、关税政策到期、FBA费用变化三重压力，直接影响毛利率和履约成本
+  - 证据：JP_compliance_5178d40fd6caea37a8b044ae、JP_ecommerce_ab4e227606dd6964bb313efd、JP_ecommerce_ece0bcfa25080451faf58c5c
+- 第 2 位：中国
+  - 优先级：P0
+  - 判断：竞品密集促销挤压流量和价格，金价波动影响库存估值，需加强定价监控和差异化话术
+  - 证据：CN_competitors_6310815f7e6bd007bbddce1c、CN_competitors_87d42c7072bb21bf06f67ce9、CN_prices_c8ac9cdb090d73a6f33c94d7
+- 第 3 位：韩国
+  - 优先级：P1
+  - 判断：Coupang自发货规则收紧将改变履约模式，须提前转型以避免流量损失和违规风险
+  - 证据：KR_ecommerce_6111c1fbb5d61d38f310e8a1
+- 第 4 位：美国
+  - 优先级：P1
+  - 判断：Amazon FBA费用更新和珠宝品类合规门槛提高，影响操作成本和账号安全
+  - 证据：US_ecommerce_f775cf7de217afe4b63b382b、US_ecommerce_9c47ae316bf11a1b3dbfb8a4
+- 第 5 位：新加坡
+  - 优先级：P2
+  - 判断：目前以趋势信号和竞争动态为主，暂无紧急运营风险，可观察
+  - 证据：SG_ecommerce_50bd672fe7ab28c9ecba836d、SG_competitors_dec5022252032a6302a1ece9
+- 第 6 位：马来西亚
+  - 优先级：P2
+  - 判断：本地竞品活跃但暂无平台规则剧变，应以监控竞品价格和促销为主
+  - 证据：MY_competitors_7ee2bc857b5536d2f0f6ae1f
+- 第 7 位：泰国
+  - 优先级：P2
+  - 判断：主要信号为珠宝展会和趋势内容，可借势做轻量测试，无紧急运营调整
+  - 证据：TH_competitors_2345749cf882da8aa201812a
+- 第 8 位：越南
+  - 优先级：P2
+  - 判断：竞品扩张信号值得关注，但短期无平台或合规突变，保持观望
+  - 证据：VN_competitors_1059f8818eebafc3e3c74086
+
+## 三、跨市场关键变化
+- K-01
+  - 市场：日本
+  - 类别：regulation
+  - 变化：美国对日关税Section 122将于2026年7月24日到期
+  - 业务影响：供应链成本不确定性增加，需在合同中加入关税变动条款
+  - 行业维度：毛利/价格
+  - 证据：JP_compliance_5178d40fd6caea37a8b044ae / global-scm.com / URL完整
+- K-02
+  - 市场：全球
+  - 类别：regulation
+  - 变化：OFAC SDN名单快照 fetched
+  - 业务影响：所有市场需排查业务往来中是否存在制裁实体，避免合规处罚
+  - 行业维度：合规
+  - 证据：CN_compliance_7a077c46a3685d2923828a8d / OFAC / URL完整
+- K-03
+  - 市场：日本
+  - 类别：platform
+  - 变化：Amazon日本站推荐费将上调0.4%
+  - 业务影响：毛利空间直接收窄，需测算影响并考虑调价或成本优化
+  - 行业维度：毛利/价格
+  - 证据：JP_ecommerce_ab4e227606dd6964bb313efd / sellercentral.amazon.co.jp / URL完整
+- K-04
+  - 市场：日本
+  - 类别：platform
+  - 变化：高价值珠宝退货政策调整为不可退货
+  - 业务影响：高客单商品售后风险上升，需更新客服流程和页面说明
+  - 行业维度：转化/品牌心智
+  - 证据：JP_ecommerce_dd5c5ff28b4bcc16a4ad063a / www.amazon.co.jp / URL完整
+- K-05
+  - 市场：韩国
+  - 类别：platform
+  - 变化：Coupang将停止自发货产品注册
+  - 业务影响：需将产品转为平台仓发货，否则面临流量下降或下架风险
+  - 行业维度：流量/转化
+  - 证据：KR_ecommerce_6111c1fbb5d61d38f310e8a1 / scm-en.ecer.com / URL完整
+- K-06
+  - 市场：美国
+  - 类别：platform
+  - 变化：Amazon FBA配送费更新，小件商品成本上升
+  - 业务影响：部分低客单珠宝物流费用占比增加，需优化包装或提价
+  - 行业维度：毛利/价格
+  - 证据：US_ecommerce_f775cf7de217afe4b63b382b / sellercentral.amazon.com / URL完整
+- K-07
+  - 市场：美国
+  - 类别：platform
+  - 变化：Amazon珠宝品类要求提供材料测试文档
+  - 业务影响：如未及时提交可能导致listing被移除，影响销售
+  - 行业维度：合规/流量
+  - 证据：US_ecommerce_9c47ae316bf11a1b3dbfb8a4 / redstagfulfillment.com / URL完整
+- K-08
+  - 市场：中国
+  - 类别：competition
+  - 变化：本地竞品老凤祥、六福珠宝频繁上新及节日促销
+  - 业务影响：可能分流流量，压缩我方价格空间，需差异化应对
+  - 行业维度：流量/品牌心智
+  - 证据：CN_competitors_87d42c7072bb21bf06f67ce9 / www.lukfook.com / URL完整
+- K-09
+  - 市场：东南亚
+  - 类别：competition
+  - 变化：周大福在曼谷、新加坡加速开店
+  - 业务影响：区域竞争加剧，需加强本地化内容和服务差异
+  - 行业维度：转化/品牌心智
+  - 证据：SG_competitors_1cf64aaae8e59652897c4ec9 / marketech-apac.com / URL完整
+- K-10
+  - 市场：中国
+  - 类别：product
+  - 变化：金价高位波动，145 USD/克以上
+  - 业务影响：库存估值和定价策略需动态调整，以维持毛利
+  - 行业维度：毛利/价格
+  - 证据：CN_prices_c8ac9cdb090d73a6f33c94d7 / www.kitco.com / URL完整
+
+## 四、机会与风险矩阵
+### 机会
+- O-01
+  - 市场：美国
+  - 机会：美国亚马逊FBA配送费即将调整，部分重量分段涨幅明显。立即分析自有珠宝SKU的包装尺寸与重量，测试将轻小件重新包装以落入更低费率分段，并对比改用第三方海外仓配送的成本，一周后复核每单履约成本变化。
+  - 经营影响：优化包装后单个订单履约成本有望降低0.3-0.5美元，直接影响毛利；若测试成功，月销量万件以上产品可节省数千美元。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：US_ecommerce_f775cf7de217afe4b63b382b / sellercentral.amazon.com / https://sellercentral.amazon.com/help/hub/reference/external/GABBX6GZPA8MSZGW?locale=en-US
+- O-02
+  - 市场：日本
+  - 机会：亚马逊日本站将于2026年3月31日起停止支持贴标混合库存（commingling）。立即排查所有FBA SKU的标签类型，对仍用制造商条码的产品，在截止日前转换为亚马逊条码（FNSKU），并安排重新贴标入仓，避免因混储导致账户受限或库存不可售。
+  - 经营影响：提前完成标签切换可防止数千件商品被隔离或强制移除，确保账号绩效和库存可用性，避免销售中断风险。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：JP_ecommerce_9284a26477a42a94bebe6654 / www.bellavix.com / https://www.bellavix.com/amazon-commingling-policy-update-2026-what-fba-sellers-must-do-before-march-31
+- O-03
+  - 市场：韩国
+  - 机会：Coupang收紧自有发货政策，将停止新SF产品注册，且预测SF店铺价格将下降。立即盘点现有SF商品，挑出销量前20%的SKU，测试转为Coupang火箭配送（Fulfillment by Coupang）后的流量和转化变化，同时清理动销差的SF listing以降低低价竞争压力。
+  - 经营影响：转型为火箭配送商品可获得搜索排名加权和流量扶持，预计核心SKU转化率可提升15-20%，并减少因SF价格战造成的毛利侵蚀。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：KR_ecommerce_6111c1fbb5d61d38f310e8a1 / scm-en.ecer.com / https://scm-en.ecer.com/topic/detail-854140-coupang-tightens-selffulfillment-rules-urges-seller-compliance.html
+- O-04
+  - 市场：美国
+  - 机会：多家行业媒体预警亚马逊2026年珠宝类目审核趋严，需提供材质检测报告、铅测试等。立即整理现有黄金、钻石、珍珠品类的供应商发票和材质证书，在类目审核触发前主动提交合规申请，获取该类目的提前许可，从而在旺季前抢跑竞争对手，获得无竞争窗口期。
+  - 经营影响：首批通过审核的卖家将在搜索加权和Buy Box赢得率上获得优势，直接拉升流量和转化；同时避免旺季前突击申请被拒导致下架风险。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：US_ecommerce_62db03c100f860caa052f7d7 / sellerise.com / https://sellerise.com/blog/amazon-restricted-categories
+- O-05
+  - 市场：日本
+  - 机会：亚马逊日本站宣布2026年4月起部分类别佣金上调0.4%，但FBA配送费下调。立即拉取所有在售珠宝ASIN的最新费率表，计算综合成本变化，筛选出佣金增加额小于配送费减少额的产品，加大广告预算；对总成本上升的SKU，测试提价5-10%并监控转化率，一周后决定是否保留。
+  - 经营影响：利用费率结构对冲机会，总费用可能不升反降；精准调整可优化每个SKU的利润，避免整体毛利受损。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：JP_ecommerce_ab4e227606dd6964bb313efd / sellercentral.amazon.co.jp / https://sellercentral.amazon.co.jp/help/hub/reference/external/GT23F3ST7FEZKT9A?mons_sel_locale=en_JP
+- O-06
+  - 市场：中国
+  - 机会：行业媒体指出2026年培育钻石应作为独立品类运营，强调其环保故事与差异化定价。立即在天猫/京东旗舰店设立“培育钻石专区”，设计“未来之钻”等情感化页面，上架3-5枚主打款式的培育钻戒指/项链，定价比同克拉天然钻低60%，投放搜索词“培育钻石”和“环保钻石”，两周后对比专区点击率和加购率。
+  - 经营影响：抢占培育钻石新品类心智，吸引Z世代和环保意识客群，预计新专区可贡献额外5-10%的店铺自然流量，并拉升整体毛利率（培育钻成本更低）。
+  - 建议责任：总部
+  - 优先级：P0
+  - 证据：CN_ecommerce_140876f3d0d4b07cc5360554 / southernjewelrynews.com / https://southernjewelrynews.com/featured-article/the-hottest-jewelry-trends-for-2026
+- O-07
+  - 市场：泰国
+  - 机会：趋势报告显示泰国买家对极简设计和混合金属首饰需求上升。立即在Lazada/Shopee店铺上架10款银镀白金色或玫瑰金/白金双色极简项链、戒指，定价在800-1500泰铢区间，主图突出叠戴效果，投放“minimal jewelry”和“mixed metal”关键词，并通过A/B测试对比纯银单品类转化率。
+  - 经营影响：极简混合金属品类拥有较高搜索增长且竞争尚低，有机会在2-3周内获得类目Best Seller标签，带来稳定自然流量，并拉新年轻潮流客群。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：TH_ecommerce_c3357d7b83824d37f25b4e7f / gabrielfinejewelers.com / https://gabrielfinejewelers.com/blogs/news/2026-jewelry-trends-buyers-are-asking-about-early
+- O-08
+  - 市场：中国
+  - 机会：老凤祥在其美国及国内官网实时展示金价并主打24K古法金手镯。立即监控其每周定价，对比我们同克重产品的工费，若发现我方溢价过高，在主流电商平台推出“金价+限时工费补贴”活动，测试顾客对工费的敏感度，并跟进询单转化率。
+  - 经营影响：贴近竞品金饰克重溢价可防止价格敏感客户流失，保护黄金品类的销量和市场份额；透明定价策略也有助于建立品牌信任。
+  - 建议责任：总部+区域
+  - 优先级：P0
+  - 证据：CN_competitors_6310815f7e6bd007bbddce1c / https://lfxjewelry.com/collections/24k-gold / https://lfxjewelry.com/collections/24k-gold
+- O-09
+  - 市场：泰国
+  - 机会：周大福在曼谷Siam Paragon开设新店并推出泰国限定系列。立即在曼谷地区Facebook/Instagram投放竞品拦截广告，宣传我们的本地化设计及“曼谷当场维修”服务，并推出“凭周大福购物袋到店免费清洗并送925银链”活动，测试到店客流转化。
+  - 经营影响：阻断高端商场周边的高价值客流向竞品，巩固曼谷核心商圈的品牌阵地；通过服务引流有望将竞争对手开业热度转化为自身的新客获取机会。
+  - 建议责任：总部+区域
+  - 优先级：P0
+  - 证据：TH_competitors_2345749cf882da8aa201812a / www.businesstimes.com.sg / https://www.businesstimes.com.sg/international/global/chinas-leading-jeweller-chow-tai-fook-opens-bangkok-plans-more-global-stores
+- O-10
+  - 市场：韩国
+  - 机会：亚太培育钻石市场报告显示韩国搜索增长显著，2-4克拉无色钻石最受欢迎。立即在韩国Coupang和Naver Shopping上架3款2-4克拉培育钻戒指，录制备有KI证书的短视频，出价“랩그로운 다이아몬드 2캐럿”等长尾词，一周后分析搜索流量和加购数据。
+  - 经营影响：利用品类高搜索增长窗口期，有机会以较低CPC获取精准购买意图流量，快速打爆单品，并拉新对奢侈钻石有渴望但预算有限的客群。
+  - 建议责任：总部
+  - 优先级：P0
+  - 证据：KR_market_trends_cc8793128029abb09c2f608e / www.cognitivemarketresearch.com / https://www.cognitivemarketresearch.com/regional-analysis/asia-pacific-lab-grown-diamonds-market-report
+- O-11
+  - 市场：新加坡
+  - 机会：电商报告指出AR虚拟试戴和高清360°图像正消解珠宝线上购买障碍。立即在新加坡虾皮和独立站对TOP 50 SKU上线AR试戴功能，并制作10秒360°旋转视频放在主图位，对比上线前后加购率和退货率。
+  - 经营影响：降低消费者线上选款的不确定性，预期加购率可提升15-20%，退货率下降5个百分点，直接提升平台转化效率和顾客满意度。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：SG_ecommerce_50bd672fe7ab28c9ecba836d / branvas.com / https://branvas.com/blogs/news/jewelry-ecommerce-market-data-2026
+- O-12
+  - 市场：美国
+  - 机会：钻石行业数据显示培育钻石市场价值持续增长，天然钻情绪走弱。立即在美国站针对培育钻石品类关键词（lab grown diamond engagement ring等）提高广告出价20%，并将闲置的天然钻推广预算转移至培育钻广告组，测试ROAS变化。
+  - 经营影响：在消费者偏好转移期抢先占领广告位，可把握品类搜索量上升红利，以更低获客成本拿到高意向订单，支撑培育钻产品线快速起量。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：US_market_trends_db4242a39347fb39f01725ac / www.news.market.us / https://www.news.market.us/diamond-statistics
+
+### 风险
+- risk_us_fba_fee
+  - 市场：美国
+  - 风险：亚马逊美国站FBA配送费在2026年调整，部分尺寸段费率上涨，如果未及时优化包装和物流成本，将直接侵蚀低客单价珠宝产品的利润空间。
+  - 经营影响：毛利下滑，尤其影响轻小件珠宝的利润阈值。需区域运营复核各SKU的FBA费率变化，重新测算盈亏平衡点。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：US_ecommerce_f775cf7de217afe4b63b382b / sellercentral.amazon.com / URL有效
+- risk_us_jewelry_restricted
+  - 市场：美国
+  - 风险：亚马逊珠宝品类被列为受限商品，要求提供材料成分文档、铅测试结果等，若无法及时通过审核，相关ASIN将被下架，导致流量中断。
+  - 经营影响：合规风险导致Listing被移除，影响已有排名的流量和转化，库存可能积压。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：US_ecommerce_92ade2e3edc236befb9aeec8 / www.sellerlabs.com / URL有效
+- risk_jp_referral_fee
+  - 市场：日本
+  - 风险：亚马逊日本站引荐费（Referral Fee）将从2026年4月起普遍上调0.4个百分点，对于珠宝等高客单价品类，每单费用增加明显，毛利将承压。
+  - 经营影响：直接减少净利润，需要区域运营重新核算是否调整售价或压缩其他成本。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：JP_ecommerce_ab4e227606dd6964bb313efd / sellercentral.amazon.co.jp / URL有效
+- risk_jp_returns_jewelry
+  - 市场：日本
+  - 风险：亚马逊日本站对单价30万日元以上的珠宝规定不支持无理由退货，但消费者可能以瑕疵为由发起索赔，且平台退货政策中关于珠宝的例外条款不够清晰，可能导致售后纠纷和高额退款。
+  - 经营影响：影响客户信任和账户健康度，高额退货将冲击现金流和资金周转。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：JP_ecommerce_dd5c5ff28b4bcc16a4ad063a / www.amazon.co.jp / URL有效
+- risk_commingling_policy
+  - 市场：日本
+  - 风险：亚马逊自2026年3月31日起停止支持无标签混储（commingling），卖家必须为每件商品贴上FNSKU标签，否则库存可能被拒收或归为不可售。
+  - 经营影响：库存入仓受阻，导致补货延迟，影响在售库存周转，增加贴标操作成本。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：JP_ecommerce_9284a26477a42a94bebe6654 / www.bellavix.com / URL有效
+- risk_kr_coupang_self_fulfillment
+  - 市场：韩国
+  - 风险：Coupang将停止新注册卖家自发货（SF）商品，现有SF列表虽不受影响，但平台政策趋严，流量向Coupang自有物流倾斜，自发货模式面临淘汰压力。
+  - 经营影响：如果本公司采用自发货，将失去流量支持，转化率下降，需尽快过渡到Coupang入库方案，否则市场份额萎缩。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：KR_ecommerce_6111c1fbb5d61d38f310e8a1 / scm-en.ecer.com / URL有效
+- risk_ofac_sdn
+  - 市场：中国
+  - 风险：OFAC SDN制裁名单更新，若本公司或供应链涉及名单实体，可能面临账户冻结、款项被截等严重合规后果。需人工核查交易对手名单。
+  - 经营影响：合规风险，可能导致平台店铺或支付通道被关闭，影响整体运营稳定性。
+  - 建议责任：总部
+  - 优先级：P0
+  - 证据：CN_compliance_7a077c46a3685d2923828a8d / OFAC / URL有效
+- risk_ctf_se_asia_expansion
+  - 市场：泰国
+  - 风险：周大福珠宝在曼谷暹罗百丽宫开设新店，并计划进一步扩展东南亚网络（包括新加坡、澳大利亚、加拿大），其在东南亚的品牌知名度和高金纯度（999.9）优势可能分流本公司中高端客户。
+  - 经营影响：市场份额被挤压，可能导致区域促销投入加大，拉低整体毛利水平。
+  - 建议责任：总部+区域
+  - 优先级：P0
+  - 证据：TH_competitors_2345749cf882da8aa201812a / www.businesstimes.com.sg / URL有效
+- risk_jp_import_tariffs
+  - 市场：日本
+  - 风险：美国依据232条款对钢铁、铝等衍生品加征50%关税，珠宝制造所需贵金属原材料（如银、铂等）成本可能传导上涨，且日本企业需注意原产地规则，若经中国加工可能叠加额外关税。
+  - 经营影响：供应链成本上升，推高采购成本，若无法转嫁将压缩毛利。需总部评估采购替代方案。
+  - 建议责任：总部
+  - 优先级：P0
+  - 证据：JP_compliance_5178d40fd6caea37a8b044ae / global-scm.com / URL有效
+- risk_cn_price_transparency
+  - 市场：中国
+  - 风险：老凤祥官网实时展示黄金金价（$189.2/克），消费者对价格高度敏感，若本公司黄金饰品定价与之相比缺乏竞争力，将直接影响线上点击和成交。
+  - 经营影响：转化率下滑，需持续监控竞品价格并动态调整定价策略，否则将损失价格敏感型客户。
+  - 建议责任：总部+区域
+  - 优先级：P0
+  - 证据：CN_competitors_6310815f7e6bd007bbddce1c / lfxjewelry.com / URL有效
+- risk_jp_allergy_requirements
+  - 市场：日本
+  - 风险：日本消费者对金属过敏非常敏感，“サージカルステンレス316L”等已成为商品标题必备词，若产品未明确标注防过敏说明，将被搜索算法过滤，失去绝大部分展示机会。
+  - 经营影响：流量骤减，导致库存滞销，需立即检视所有在售商品标题及描述是否包含防过敏关键词。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：JP_compliance_c23344d7a4bfcfe143cd76b1 / giant-starlly.com / URL有效
+
+## 五、今日建议动作
+- ACT-001
+  - 责任类型：总部
+  - 建议负责人：全球合规负责人
+  - 市场：中国, 日本, 新加坡, 泰国, 美国, 越南, 韩国, 马来西亚
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：下载最新OFAC SDN列表，解析XML并与现有客户/供应商/交易对手进行比对，筛查是否涉及制裁实体。
+  - 复核口径：提交一份包含差异分析、命中清单和应对建议的合规复核报告，由总法律顾问签字确认。
+  - 依据：多个市场（CN_compliance_7a077c46a3685d2928a3828a8d, JP_compliance_3848bc8044f267d6138ab1ec等）均触发SDN列表快照信号，证据等级A，来源OFAC。在开展市场执行前必须完成制裁合规核查，避免监管处罚。
+  - 状态：open
+- ACT-002
+  - 责任类型：总部
+  - 建议负责人：供应链与贸易合规经理
+  - 市场：日本
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：根据日本信号（JP_compliance_5178d40fd6caea37a8b044ae）中列出的品目别追加关税，逐一核对日本出口至美国的产品HS编码，确认是否适用Section 232或Section 122关税，并在现有合同中加入关税变动条款。
+  - 复核口径：产出《日本市场涉美关税影响产品清单》及更新后的合同模板，由区域负责人和法务确认。清单需包含HS编码、适用税率、关税承担方。
+  - 依据：信号（evidence_id=JP_compliance_5178d40fd6caea37a8b044ae）来自global-scm.com，详细列举了50%关税品类和7月24日Section 122到期日，不采取行动可能导致清关成本激增或供应链中断。
+  - 状态：open
+- ACT-003
+  - 责任类型：区域
+  - 建议负责人：日本市场运营经理
+  - 市场：日本
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：基于Amazon日本站推荐费上调0.4%的公告（JP_ecommerce_ab4e227606dd6964bb313efd），提取所有在售ASIN，模拟新的费用对利润的影响，并输出调价建议或成本优化方案。
+  - 复核口径：提供一份按ASIN维度的利润影响模拟表，标出毛利率低于阈值的商品，并给出定价调整或广告预算优化建议，经区域总监审批。
+  - 依据：信号来自sellercentral.amazon.co.jp，明确推荐费率增加0.4%，直接影响利润。需在费率生效前完成测算，避免运营亏损。
+  - 状态：open
+- ACT-004
+  - 责任类型：区域
+  - 建议负责人：日本市场运营经理
+  - 市场：日本
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：立即排查所有FBA库存是否启用Stickerless混合库存，并在2026年3月31日前转为亚马逊标签库存，确保所有入仓货物贴有FNSKU标签。
+  - 复核口径：2026年3月31日前在卖家中心确认所有SKU的混合库存设置已关闭，并提供至少三个ASIN的检查截图作为证据。
+  - 依据：JP_ecommerce_9284a26477a42a94bebe6654警告Amazon将于3月31日起停止支持commingled inventory，若不提前处理，货物将无法入仓，造成断货风险。
+  - 状态：open
+- ACT-005
+  - 责任类型：区域
+  - 建议负责人：日本市场运营经理
+  - 市场：日本
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：核查日本站珠宝类产品的退货政策页面，确保明确标注耳环、身体穿孔饰品等不可退货的条款，并与Amazon最新政策一致。
+  - 复核口径：更新商品详情页的退货说明，同时邮件通知客服团队，由质检抽检3个以上商品页面截图确认。
+  - 依据：JP_ecommerce_dd5c5ff28b4bcc16a4ad063a表明Amazon日本对珠宝退货有特殊限制，描述不清可能导致高退货率和索赔，影响账户健康。
+  - 状态：open
+- ACT-006
+  - 责任类型：区域
+  - 建议负责人：美国市场运营经理
+  - 市场：美国
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：根据美国FBA履行费用变更表（US_ecommerce_f775cf7de217afe4b63b382b），更新所有在售SKU的配送成本，并重新计算Selling Coach推荐的配送费价位段是否正确。
+  - 复核口径：产出《2026美国FBA费用更新影响分析》，包含至少Top20 ASIN的旧费与新费对比，以及盈亏平衡点变化，提交给全球运营总监。
+  - 依据：信号直接来自sellercentral.amazon.com，详细提供了各尺寸和重量分段的费用变化，直接影响每单利润。需及时调整定价策略以保证毛利。
+  - 状态：open
+- ACT-007
+  - 责任类型：区域
+  - 建议负责人：美国市场合规专员
+  - 市场：美国
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：收集并整理所有美国站在售珠宝产品的材料测试报告、供应商发票和铅含量检测证书，确保文件完整且在有效期内，以应对Amazon受限品审核。
+  - 复核口径：创建《美国站珠宝合规文件清单》，逐条标注有效期和缺失项，由市场负责人确认无遗漏后存档。
+  - 依据：多个信号（US_ecommerce_9c47ae316bf11a1b3dbfb8a4等）强调Amazon美国对珠宝类有材料测试和发票要求，证据等级A，缺少文档可能导致listing下架。
+  - 状态：open
+- ACT-008
+  - 责任类型：区域
+  - 建议负责人：韩国市场运营经理
+  - 市场：韩国
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：分析Coupang关闭自配送注册的可能性，评估现有自配送订单比例，并制定过渡至Coupang Fulfillment或合规自配送的替代方案。
+  - 复核口径：提交一份《Coupang自发货政策应对方案》，包含过渡时间表、成本比较和系统对接需求，经区域总监批准。
+  - 依据：KR_ecommerce_6111c1fbb5d61d38f310e8a1显示Coupang将停止新自发货注册，现有卖家需提前准备，否则可能丧失平台权限。
+  - 状态：open
+- ACT-009
+  - 责任类型：总部+区域
+  - 建议负责人：中国市场竞品分析专员
+  - 市场：中国
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：收集老凤祥、六福珠宝2026年情人節及春季新品信息，提取其主打材质、价格带、营销卖点，并与我司产品线进行对比。
+  - 复核口径：输出《中国主要竞品2026春季新品监控报告》，包含至少10个SKU的横向比较和2条行动建议，由产品经理确认。
+  - 依据：CN_competitors_87d42c7072bb21bf06f67ce9和CN_competitors_5a83c83eb479de801672a181显示老凤祥、六福在婚嫁和礼赠场景发布新品，可能抢占市场份额，需提前预警。
+  - 状态：open
+- ACT-010
+  - 责任类型：总部+区域
+  - 建议负责人：东南亚市场战略经理
+  - 市场：新加坡
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：跟进周大福在新加坡樟宜机场店及泰国新店的运营动态，评估其对东南亚珠宝零售的影响及我司在新加坡的应对策略。
+  - 复核口径：提供一份跟踪简报，包括周大福在东南亚的产品线、价格策略和新店销售数据（如有），并更新我司新加坡市场应对清单。
+  - 依据：SG_competitors_1cf64aaae8e59652897c4ec9等信号表明周大福正在加速东南亚扩张，可能挤压我司市场份额，需持续监控并调整区域策略。
+  - 状态：open
+- ACT-011
+  - 责任类型：区域
+  - 建议负责人：日本市场运营经理
+  - 市场：日本
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：综合Amazon日本站2026年4月生效的推荐费增加和物流费率下调（JP_ecommerce_ece0bcfa25080451faf58c5c），针对所有在售SKU进行综合费用模拟，识别总成本下降的品类。
+  - 复核口径：输出《日本站综合费率影响表》，标出净费用降低的SKU，并建议是否调整广告出价或商品售价以获取更多流量。
+  - 依据：JP_ecommerce_ece0bcfa25080451faf58c5c提示部分品类可能总费用下降，通过模拟可优化利润分配，最大化平台规则变化带来的红利。
+  - 状态：open
+- ACT-012
+  - 责任类型：区域
+  - 建议负责人：美国市场运营经理
+  - 市场：美国
+  - 时限：本周（原输出日期早于报告日，需人工确认）
+  - 动作：结合美国站物流费率更新和珠宝类目准入标准，重新评估轻小件或高密度包裹的配送模式，考虑是否切换至低成本物流方案或调整包装尺寸。
+  - 复核口径：提供3-5款重点商品的包装和物流优化方案对比，包括预计费用节省百分比和实施耗时，由运营总监决策。
+  - 依据：US_ecommerce_f775cf7de217afe4b63b382b提供了详细费率表，结合US_ecommerce_9c47ae316bf11a1b3dbfb8a4的合规要求，优化物流可降低履约成本，提高毛利率。
+  - 状态：open
+
+## 六、后续观察清单
+- W-01
+  - 市场：中国、新加坡、日本、泰国、美国、越南、韩国、马来西亚
+  - 观察重点：持续观察中国、新加坡、日本、泰国、美国、越南、韩国、马来西亚的竞品动作信号是否从零散事件变成经营共性变化，当前同类信号数为56条。
+  - 触发条件：下一轮采集同类信号增加到58条以上，或新增市场超过当前8个市场时，升级为专项复核。
+  - 证据：聚合证据：同类信号数=56
+- W-02
+  - 市场：中国、新加坡、日本、泰国、美国、越南、韩国、马来西亚
+  - 观察重点：持续观察中国、新加坡、日本、泰国、美国、越南、韩国、马来西亚的平台规则/渠道信号是否从零散事件变成经营共性变化，当前同类信号数为56条。
+  - 触发条件：下一轮采集同类信号增加到58条以上，或新增市场超过当前8个市场时，升级为专项复核。
+  - 证据：聚合证据：同类信号数=56
+- W-03
+  - 市场：中国、日本、美国、韩国
+  - 观察重点：持续观察中国、日本、美国、韩国的商品趋势信号是否从零散事件变成经营共性变化，当前同类信号数为27条。
+  - 触发条件：下一轮采集同类信号增加到29条以上，或新增市场超过当前4个市场时，升级为专项复核。
+  - 证据：聚合证据：同类信号数=27
+- W-04
+  - 市场：中国、新加坡、日本、泰国、美国、越南、韩国、马来西亚
+  - 观察重点：持续观察中国、新加坡、日本、泰国、美国、越南、韩国、马来西亚的合规/监管信号是否从零散事件变成经营共性变化，当前同类信号数为21条。
+  - 触发条件：下一轮采集同类信号增加到23条以上，或新增市场超过当前8个市场时，升级为专项复核。
+  - 证据：聚合证据：同类信号数=21
+- W-05
+  - 市场：中国
+  - 观察重点：观察「SDN名单快照」是否会在合规/监管维度影响该市场的商品、渠道、内容或合规动作。
+  - 触发条件：若后续采集再次出现同主题信号，或区域负责人确认其会影响上架、价格、毛利、库存、转化任一环节，则升级为行动项。
+  - 证据：CN_compliance_7a077c46a3685d2923828a8d / OFAC / URL完整
+- W-06
+  - 市场：新加坡
+  - 观察重点：观察「SDN名单快照」是否会在合规/监管维度影响该市场的商品、渠道、内容或合规动作。
+  - 触发条件：若后续采集再次出现同主题信号，或区域负责人确认其会影响上架、价格、毛利、库存、转化任一环节，则升级为行动项。
+  - 证据：SG_compliance_f7eeee1fab321910505ab4d5 / OFAC / URL完整
+- W-07
+  - 市场：日本
+  - 观察重点：观察「2026 Japan Other precious metal jewellery and parts sector short-term and long-term developments & trade possibilities and limitations」是否会在合规/监管维度影响该市场的商品、渠道、内容或合规动作。
+  - 触发条件：若后续采集再次出现同主题信号，或区域负责人确认其会影响上架、价格、毛利、库存、转化任一环节，则升级为行动项。
+  - 证据：JP_compliance_2fd69b66465a011ef467cadb / gtaic.ai / URL完整
+- W-08
+  - 市场：日本
+  - 观察重点：观察「2026年3月4日時点における、米国の輸入関税の国別状況 – コンサルタントの独り言」是否会在合规/监管维度影响该市场的商品、渠道、内容或合规动作。
+  - 触发条件：若后续采集再次出现同主题信号，或区域负责人确认其会影响上架、价格、毛利、库存、转化任一环节，则升级为行动项。
+  - 证据：JP_compliance_5178d40fd6caea37a8b044ae / global-scm.com / URL完整
+- W-09
+  - 市场：日本
+  - 观察重点：观察「2026年のトレンドは? 大人の"存在感"ジュエリー - Ops. Journal」是否会在合规/监管维度影响该市场的商品、渠道、内容或合规动作。
+  - 触发条件：若后续采集再次出现同主题信号，或区域负责人确认其会影响上架、价格、毛利、库存、转化任一环节，则升级为行动项。
+  - 证据：JP_compliance_4cdb6e6a725e0bda347c4cdb / ops-official.com / URL完整
+- W-10
+  - 市场：日本
+  - 观察重点：观察「2026年３月香港ジュエリーフェアVol２ ジュエリー編」是否会在合规/监管维度影响该市场的商品、渠道、内容或合规动作。
+  - 触发条件：若后续采集再次出现同主题信号，或区域负责人确认其会影响上架、价格、毛利、库存、转化任一环节，则升级为行动项。
+  - 证据：JP_compliance_b3429a9a36f32f1bbbd98223 / www.youtube.com / URL完整
+
+## 七、证据追溯
+- CN_compliance_7a077c46a3685d2923828a8d
+  - 市场：中国
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- CN_compliance_aggregate
+  - 市场：中国
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- JP_compliance_3848bc8044f267d6138ab1ec
+  - 市场：日本
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- JP_compliance_2fd69b66465a011ef467cadb
+  - 市场：日本
+  - 来源：gtaic.ai
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026 Japan Other precious metal jewellery and parts sector short-term and long-term developments & trade possibilities and limitations / 优先级=P0 / 责任类型=总部
+- JP_compliance_5178d40fd6caea37a8b044ae
+  - 市场：日本
+  - 来源：global-scm.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026年3月4日時点における、米国の輸入関税の国別状況 – コンサルタントの独り言 / 优先级=P0 / 责任类型=总部
+- JP_compliance_4cdb6e6a725e0bda347c4cdb
+  - 市场：日本
+  - 来源：ops-official.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026年のトレンドは? 大人の"存在感"ジュエリー - Ops. Journal / 优先级=P0 / 责任类型=总部
+- JP_compliance_b3429a9a36f32f1bbbd98223
+  - 市场：日本
+  - 来源：www.youtube.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026年３月香港ジュエリーフェアVol２ ジュエリー編 / 优先级=P0 / 责任类型=总部
+- JP_compliance_c23344d7a4bfcfe143cd76b1
+  - 市场：日本
+  - 来源：giant-starlly.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026春夏 日本アクセサリー市場 トレンド深度分析＆戦略レポート / 3-6月期 / 优先级=P0 / 责任类型=总部
+- JP_compliance_aggregate
+  - 市场：日本
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自71条SQLite记录 / 优先级=P0 / 责任类型=总部
+- KR_compliance_42714b8067145ca36d43d7c1
+  - 市场：韩国
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- KR_compliance_aggregate
+  - 市场：韩国
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- US_compliance_8e727114c0c56b14c3bfaa40
+  - 市场：美国
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- US_compliance_aggregate
+  - 市场：美国
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- SG_compliance_f7eeee1fab321910505ab4d5
+  - 市场：新加坡
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- SG_compliance_aggregate
+  - 市场：新加坡
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- MY_compliance_1520eaa4afcfcd05870ba425
+  - 市场：马来西亚
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- MY_compliance_aggregate
+  - 市场：马来西亚
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- TH_compliance_79c6a21611fbfab7970b7d47
+  - 市场：泰国
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- TH_compliance_aggregate
+  - 市场：泰国
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- VN_compliance_358bc83f28d9cd8c16324a03
+  - 市场：越南
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- VN_compliance_aggregate
+  - 市场：越南
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- CN_ecommerce_c7f941bc1c674dbb9987285e
+  - 市场：中国
+  - 来源：wholesalejewelrywebsite.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026 Jewelry Trends / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_140876f3d0d4b07cc5360554
+  - 市场：中国
+  - 来源：southernjewelrynews.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026 Jewelry Trends Everyone Will Be Talking About / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_e82f0cff441341081f48af20
+  - 市场：中国
+  - 来源：storyandrain.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026's New Jewelry Rules / Story + Rain / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_ca5fd3dd9b0fc51998d4c76f
+  - 市场：中国
+  - 来源：www.elle.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：4 Jewelry Trends Fashion Girls Are Wearing in 2026 - ELLE / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_092be8659fc4dea520d8d58b
+  - 市场：中国
+  - 来源：www.glamour.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：5 Spring Jewelry Trends Fashion Insiders Are Wearing for 2026 / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_678cbba21b69087d8f9061cc
+  - 市场：中国
+  - 来源：www.ucfs.net
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：5 Trends Shaping the Jewelry Industry and Market Outlook in 2026 / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_aggregate
+  - 市场：中国
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：电商平台聚合信号，来自200条SQLite记录 / 优先级=P0 / 责任类型=区域
+- JP_ecommerce_275723b5981d217b0dbb1c04
+  - 市场：日本
+  - 来源：global.rakuten.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026 Events & Updates / Rakuten Group, Inc. / 优先级=P0 / 责任类型=区域
+- JP_ecommerce_ab4e227606dd6964bb313efd
+  - 市场：日本
+  - 来源：sellercentral.amazon.co.jp
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026 Referral fee changes / 优先级=P0 / 责任类型=区域
+
+## 八、不确定性与人工确认
+- U-01
+  - 类型：上下文压缩
+  - 说明：301 条低优先级信号未进入LLM压缩上下文，但仍保留在全量导出文件中。
+  - 建议处理：涉及高风险决策时，使用 sqlite_full_export.json 和 collection_audit.json 做全量审计。

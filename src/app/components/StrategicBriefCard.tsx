@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { FileText, Calendar, MapPin, Target } from "lucide-react";
 import { useRegion, regionConfig } from "../contexts/RegionContext";
 import type { StrategyMode } from "./StrategyModeSelector";
-import { decisionSummary, marketPriorities, keyChanges, opportunities, risks, recommendedActions } from "../data/strategyData";
+import { getStrategyData } from "../data/strategyData";
 
 interface StrategicBriefCardProps {
   mode: StrategyMode;
@@ -16,29 +16,32 @@ const modeLabels = {
 
 // 基于策略报告构建简报
 function buildBrief(mode: StrategyMode, region: string) {
+  const data = getStrategyData(mode);
+  const { decisionSummary, marketPriorities, keyChanges, opportunities, risks, recommendedActions } = data;
+
   const mp = marketPriorities.find((m) => m.market === region);
   const isGlobal = region === "全球" || region === "global";
 
   if (isGlobal) {
-    const topMarkets = marketPriorities.filter((m) => m.priority === "P1").map((m) => m.market);
+    const p0Markets = marketPriorities.filter((m) => m.priority === "P0").map((m) => m.market);
     return {
       title: "全球跨市场战略简报",
       summary: decisionSummary,
       keyInsights: [
         {
-          label: "P1 优先市场",
-          value: `${topMarkets.length} 个市场`,
-          description: topMarkets.join("、") + " — 综合得分最高，需优先配置资源。",
+          label: "P0 优先市场",
+          value: `${p0Markets.length} 个市场`,
+          description: p0Markets.join("、") + " — 综合得分最高，需优先配置资源。",
         },
         {
           label: "跨市场关键变化",
           value: `${keyChanges.length} 项`,
-          description: `涵盖${[...new Set(keyChanges.map(k => k.category))].join("、")}等维度。${keyChanges[0].change}`,
+          description: `涵盖${[...new Set(keyChanges.map(k => k.category))].join("、")}等维度。${keyChanges[0]?.change || ""}`,
         },
         {
           label: "竞争格局",
           value: "Chow Tai Fook 全球扩张",
-          description: keyChanges.find(k => k.id === "K-07")?.businessImpact || "",
+          description: keyChanges.find(k => k.id === "K-07")?.businessImpact || keyChanges[0]?.businessImpact || "",
         },
       ],
       recommendations: recommendedActions.slice(0, 3).map((a) => a.action),
@@ -52,7 +55,7 @@ function buildBrief(mode: StrategyMode, region: string) {
 
   return {
     title: `${region}市场战略简报`,
-    summary: regionMp.judgment,
+    summary: [regionMp.judgment],
     keyInsights: [
       {
         label: "市场优先级",

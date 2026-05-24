@@ -1,0 +1,544 @@
+# 每日跨市场运营决策与策略判断报告（创新突破方向）
+
+## 优先级说明
+P0 = 今日必须处理；P1 = 本周处理；P2 = 观察；P3 = 归档。
+证据等级：A = 证据完整可直接讨论；B = 有来源但需补 URL；C = 证据较弱；D = 必须人工确认。
+
+## 一、决策摘要
+报告取向：创新突破方向
+判断口径：优先寻找可形成新品类、新场景、新内容范式、新技术体验或新增长曲线的机会。
+
+1. 多市场涌现培育钻石、可持续材料与中性设计趋势，试点新品线可形成新增长曲线，但需绑定转化率与品牌调性验证指标。
+2. 日本市场呈现‘日常佩戴第二皮肤’与磁石胸针等场景化创新，启发产品研发与内容测试，但供应链与材料合规须前置确认。
+3. AR虚拟试戴与社交电商在韩国、越南等市场具备技术融合潜力，建议分区域进行A/B测试与创作者合作，避免一次性重投入。
+4. 平台费用与合规收紧（Amazon、Coupang）抬高试错成本，但差异化内容与新材质品类在严格市场中反易获搜索红利，应调整渠道选品策略。
+
+## 二、市场优先级一览
+- 第 1 位：日本
+  - 优先级：P0
+  - 判断：信号密度与创新信号质量最高，拥有具体的场景化消费者洞察（磁石胸针、防过敏金属、第二皮肤饰品）可转化为MVP试点，且平台政策变化带来渠道优化窗口。
+  - 证据：JP_compliance_c23344d7a4bfcfe143cd76b1 / giant-starlly.com / URL完整、JP_ecommerce_9284a26477a42a94bebe6654 / www.bellavix.com / URL完整
+- 第 2 位：中国
+  - 优先级：P0
+  - 判断：培育钻石与中性设计趋势信号强烈，年轻客群集中且社交电商生态成熟，适合启动新品类内容实验与数字化互动试点。
+  - 证据：CN_ecommerce_140876f3d0d4b07cc5360554 / southernjewelrynews.com / URL完整、CN_ecommerce_e82f0cff441341081f48af20 / storyandrain.com / URL完整
+- 第 3 位：韩国
+  - 优先级：P1
+  - 判断：K-pop影响力与穿戴极简主义创新潜力突出，但AR技术落地与本土平台政策（Coupang）变化需先完成合规与可行性验证。
+  - 证据：KR_market_trends_4a9015dc1e2b8a79a4a48b00 / www.jewelersmutual.com / URL完整、KR_ecommerce_6111c1fbb5d61d38f310e8a1 / scm-en.ecer.com / URL完整
+- 第 4 位：美国
+  - 优先级：P1
+  - 判断：成熟市场中可持续材料与新材质搜索量上升，但品牌调性偏移风险较高；Amazon政策变化要求提前做好合规准备。
+  - 证据：US_market_trends_db4242a39347fb39f01725ac / www.news.market.us / URL完整、US_ecommerce_9c47ae316bf11a1b3dbfb8a4 / redstagfulfillment.com / URL完整
+- 第 5 位：越南
+  - 优先级：P2
+  - 判断：影响者营销成本低且社交电商生态快速成长，适合作为低成本内容实验场，但供应链与质量管控能力尚待评估。
+  - 证据：VN_social_media_abaa83b3e76f05fb7685caf8 / www.campaignasia.com / URL完整、VN_ecommerce_0beee8ac88aa9b5baad88a15 / branvas.com / URL完整
+- 第 6 位：新加坡
+  - 优先级：P2
+  - 判断：作为高消费力市场可测试可持续材料叙事与价格敏感度，但本土市场较小，适合作为区域新品首发地。
+  - 证据：SG_ecommerce_50bd672fe7ab28c9ecba836d / branvas.com / URL完整、SG_geopolitics_68187390334af3dd56b1953f / jjgoldjewellery.com / URL完整
+- 第 7 位：马来西亚
+  - 优先级：P2
+  - 判断：黄金消费文化浓厚，可试探轻量化与中性设计需求，但本地竞品（Poh Kong）文化贴合度高，创新扩散速度可能较慢。
+  - 证据：MY_competitors_7ee2bc857b5536d2f0f6ae1f / www.pohkong.com.my / URL完整、MY_ecommerce_83b8f4f0a5e7aa034db02b10 / gabrielfinejewelers.com / URL完整
+- 第 8 位：泰国
+  - 优先级：P2
+  - 判断：曼谷珠宝展与Chow Tai Fook加速扩张表明市场竞争加剧，可作为新材质与设计语言的输出窗口，但需评估本地供应链配合度。
+  - 证据：TH_social_media_a056ab124865a1df14850ed4 / www.bkkgems.com / URL完整、TH_competitors_2345749cf882da8aa201812a / www.businesstimes.com.sg / URL完整
+
+## 三、跨市场关键变化
+- K-01
+  - 市场：日本
+  - 类别：产品/设计
+  - 变化：日本市场出现‘つけっぱなし（佩戴即可）’饰品趋势，磁石胸针与防过敏材料成为搜索门槛。
+  - 业务影响：启发新场景品类；影响材料采购标准与 listing 关键词策略，带来产品形态创新。
+  - 行业维度：品类、渠道、转化
+  - 证据：JP_compliance_c23344d7a4bfcfe143cd76b1
+- K-02
+  - 市场：中国、日本、韩国
+  - 类别：产品/品类
+  - 变化：培育钻石被多本行业媒体列为独立品类而非天然钻石替代品，强调其环保属性与价格逻辑。
+  - 业务影响：影响品类架构、毛利结构与品牌心智；若作为独立线推出可开辟新客群。
+  - 行业维度：品类、毛利/价格、品牌心智
+  - 证据：CN_ecommerce_140876f3d0d4b07cc5360554, KR_market_trends_cc8793128029abb09c2f608e
+- K-03
+  - 市场：中国、美国、日本
+  - 类别：产品/设计
+  - 变化：中性化饰品与模块化设计在多份趋势报告中列为高搜索量品类，强调纹理、形态而非传统性别符号。
+  - 业务影响：可能扩大客群基数，影响产品开发与视觉营销方向。
+  - 行业维度：品类、品牌心智、流量
+  - 证据：CN_ecommerce_140876f3d0d4b07cc5360554, JP_market_trends_dbc009b36910499b7bbd7abc, US_social_media_634941c84170d16785f22c37
+- K-04
+  - 市场：中国、日本
+  - 类别：产品/材料
+  - 变化：木材、树脂、搪瓷等非传统材质在时尚媒体中列为2026重要方向，强调色彩与雕塑感。
+  - 业务影响：若供应链支持，可小批量试制，影响产品设计团队与供应商开发。
+  - 行业维度：品类、库存
+  - 证据：CN_ecommerce_e82f0cff441341081f48af20, JP_market_trends_176419b81027e99ac6847984
+- K-05
+  - 市场：韩国、越南
+  - 类别：渠道/技术
+  - 变化：社交电商与AR试戴融合加速，Coupang收紧自发货政策倒逼FBA规范化。
+  - 业务影响：影响渠道策略与运营模式；AR可能提升线上转化，但需技术验证。
+  - 行业维度：渠道、转化、流量
+  - 证据：KR_ecommerce_cc31f26e59fd6206916bfdc8, KR_ecommerce_6111c1fbb5d61d38f310e8a1, VN_social_media_abaa83b3e76f05fb7685caf8
+- K-06
+  - 市场：美国、新加坡
+  - 类别：平台/合规
+  - 变化：Amazon美国与日本更新FBA费用与首饰品类审批门槛，要求材料测试与合规证明。
+  - 业务影响：增加新品试错成本，但也提升有准备商家的进入壁垒，可借合规差异化。
+  - 行业维度：渠道、毛利/价格、合规
+  - 证据：US_ecommerce_f775cf7de217afe4b63b382b, US_ecommerce_9c47ae316bf11a1b3dbfb8a4
+- K-07
+  - 市场：东南亚（新、马、泰、越）
+  - 类别：竞争/扩张
+  - 变化：Chow Tai Fook 加速在东南亚开设旗舰店与推地域特供版，本地竞品（Poh Kong）主打文化设计。
+  - 业务影响：要求我方创新产品需有本地文化关联或差异化设计，否则易被挤压。
+  - 行业维度：品牌心智、流量
+  - 证据：SG_competitors_dec5022252032a6302a1ece9, MY_competitors_7ee2bc857b5536d2f0f6ae1f
+- K-08
+  - 市场：韩国
+  - 类别：设计/美学
+  - 变化：韩国极简主义与K-pop风格珠宝被全球趋势报告强调为标杆，强调精细线条与情感表达。
+  - 业务影响：可作为设计语言突破的参考，输出到其他市场。
+  - 行业维度：品类、品牌心智
+  - 证据：KR_market_trends_4a9015dc1e2b8a79a4a48b00
+
+## 四、机会与风险矩阵
+### 机会
+- O-01
+  - 市场：中国
+  - 机会：批发网站2026年趋势提到马主题饰品及可夹式吊坠的零售机会，这类小件商品可降低尝试门槛。先做出三款生肖马可拆卸吊坠（合金+冷珐琅），在电商店铺用新品专区上线，重点看加购率和关联黄金品类点击。
+  - 经营影响：低客单饰品拉动自然流量入口，同时带动高毛利黄金品类曝光，提升整个店铺的转化漏斗效率。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：CN_ecommerce_c7f941bc1c674dbb9987285e / wholesalejewelrywebsite.com / https://wholesalejewelrywebsite.com/blogs/news/2026-jewelry-trends
+- O-02
+  - 市场：新加坡
+  - 机会：行业报告指出 AR 虚拟试戴和高清 360° 影像正在降低线上买钻阻力，东南亚线上渗透率快速上升。选取 3 款培育钻石戒指，在独立站添加 Web AR 试戴功能，对比试验组与未使用 AR 的转化率和 30 天退货率。
+  - 经营影响：高客单钻石线上退货率每降 1 个百分点可直接提升毛利，延长页面停留也有助于自然搜索权重。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：SG_ecommerce_50bd672fe7ab28c9ecba836d / branvas.com / https://branvas.com/blogs/news/jewelry-ecommerce-market-data-2026
+- O-03
+  - 市场：中国
+  - 机会：老凤祥 24K 金货架高度同质化，消费者容易审美疲劳。以古法金为基底，加入‘中国色’珐琅（如天青、胭脂）开发限量黄金手镯，通过抖音达人种草并开放预订，用预订量和评论区情绪判断市场接受度。
+  - 经营影响：跳出克价竞争，用文化设计建立品牌国潮心智，从而维持高于大盘的毛利率。
+  - 建议责任：总部+区域
+  - 优先级：P0
+  - 证据：CN_competitors_6310815f7e6bd007bbddce1c / lfxjewelry.com / https://lfxjewelry.com/collections/24k-gold
+- O-04
+  - 市场：美国
+  - 机会：ELLE 将雕塑感银饰列为 2026 年核心趋势，银饰成本低、适合社交裂变。启动 TikTok #SilverStatement 挑战，鼓励用户用品牌银饰搭配造型，优胜者获新品体验金；监测话题视频播放量和 UGC 产出条数。
+  - 经营影响：以低成本内容拉动自然流量，吸引 Gen Z 关注并沉淀为品牌社交资产，间接提升线上商城访问量。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：US_market_trends_121928371ee5edc99734909e / www.elle.com / https://www.elle.com/fashion/trend-reports/a70259098/2026-jewelry-trends
+- O-05
+  - 市场：日本
+  - 机会：日本手工艺术家突出侘寂美学，以不规则、质朴纹理为特色。与本土银匠合作推出「Wabi-Sabi」限量系列（戒指、耳线），在乐天市场独家首发，以售罄时间和复购询问量衡量产品力。
+  - 经营影响：借助在地手作故事拉升品牌高端形象，吸引愿为独特工艺支付溢价的客群，直接提升客单价。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：JP_market_trends_176419b81027e99ac6847984 / japanobjects.com / https://japanobjects.com/features/8-inventive-handmade-jewelry-designs-by-japanese-artists
+- O-06
+  - 市场：韩国
+  - 机会：韩国趋势报告强调可持续和实验室培育钻石，亚太培育钻市场年增 12.6%。快速上架 3 款培育钻石求婚戒指，定价为同级天然钻的一半，通过 Naver 博客和 YouTube 素人测评传播，跟踪转化率和客户好评率。
+  - 经营影响：进入高增速品类，用性价比优势获取新婚消费者，扩大市场份额并降低天然钻石库存资金压力。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：KR_market_trends_73340e971062c5d6814b8cbf / okgjewelry.com / https://okgjewelry.com/blogs/blog/top-10-jewelry-trends-that-will-shine-in-2026
+- O-07
+  - 市场：泰国
+  - 机会：泰国电商报告显示买家提前询问极简设计和培育钻石，直播渠道活跃。在 Shopee Live 开设「2026 趋势预购」专场，以极简培育钻石项链为主打，收定金锁定生产，用直播间观看和预购定金金额作为验证指标。
+  - 经营影响：以 C2M 预售模式降低新品库存风险，同时利用直播互动提升转化效率，直接拉动泰国站 GMV。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：TH_ecommerce_c3357d7b83824d37f25b4e7f / gabrielfinejewelers.com / https://gabrielfinejewelers.com/blogs/news/2026-jewelry-trends-buyers-are-asking-about-early
+- O-08
+  - 市场：新加坡
+  - 机会：周大福 JOIE 系列借助迪士尼、chiikawa 等 IP 联名吸引年轻客群。可试点与东南亚本土 IP（如新加坡 Mr. Kiasu）联名开发限量金饰挂坠，在线上快闪店销售，通过 IP 粉丝触达率和售罄速度判断可行性。
+  - 经营影响：借助 IP 流量打破品牌老化印象，提高年轻客群复购率，并积累联名运营经验。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：SG_competitors_2f27302dc502402f047a3897 / www.chowtaifook.com / https://www.chowtaifook.com/en-hk/campaign/ctf-joie-collection
+- O-09
+  - 市场：日本
+  - 机会：田中贵金属以纯金高达、纯金摇马瞄准动漫收藏投资市场。可试制高人气动漫角色 999 金吊坠（如鬼灭之刃款），在众筹平台小批量发售，用众筹目标达成率和客单价验证收藏品类需求。
+  - 经营影响：开辟高毛利收藏黄金品类，用 IP 带动非珠宝客群进店，提升整体利润贡献。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：JP_competitors_fa5e5a244714fdb54983b480 / gettyimages.dk / https://www.gettyimages.dk/photos/tanaka-kikinzoku-jewelry
+- O-10
+  - 市场：美国
+  - 机会：蒂芙尼重点展示粗链节、极简手镯和混合金属叠戴趋势。推出一组含银、黄金、玫瑰金的可叠戴模块化薄手镯，允许客户自由组合；在独立站发售，测量叠戴组的平均购买件数和客单价。
+  - 经营影响：模块化设计提高连带购买率，拉升客单价，同时以差异化的叠戴方案减少纯比价行为，保护毛利。
+  - 建议责任：总部+区域
+  - 优先级：P0
+  - 证据：TH_competitors_58e0a19405da079a1deda49e / www.tiffany.com / https://www.tiffany.com/jewelry/bracelets
+- O-11
+  - 市场：日本
+  - 机会：日本手工艺术家在 Instagram 上的作品（如 Enso 波纹手镯）引起艺术圈关注。邀请一位艺术家在品牌官方 Instagram 进行联名创作直播，并将切片投放为广告，以内容互动率和限量款咨询量作为验证。
+  - 经营影响：沉淀高互动艺术粉丝并提升品牌文化厚度，为后续高端系列发布积累精准流量池。
+  - 建议责任：区域
+  - 优先级：P1
+  - 证据：JP_market_trends_176419b81027e99ac6847984 / japanobjects.com / https://japanobjects.com/features/8-inventive-handmade-jewelry-designs-by-japanese-artists
+- O-12
+  - 市场：美国
+  - 机会：2026 年亚马逊进一步收紧珠宝销售限制，要求材料测试和含铅报告。立即梳理美国站 ASIN，对高风险品进行铅含量测试并备齐供应商发票，同时在详情页强化安全材质标识，跟踪因合规导致的 Listing 下架数量和恢复周期。
+  - 经营影响：主动合规可直接避免 Listing 停售带来的销量断层，保障账户健康度和持续的自然流量，属于合规风险对冲。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：US_ecommerce_62db03c100f860caa052f7d7 / sellerise.com / https://sellerise.com/blog/amazon-restricted-categories
+
+### 风险
+- risk_01
+  - 市场：中国
+  - 风险：基于全球趋势报告押注2026年流行的树脂、木质雕塑等非核心材质，但未在中国市场进行小范围客群验证，若本土消费者对这类材质的价值感知低于预期，将导致新品库存周转天数远超安全线。需要人工确认中国一、二线城市目标客群的实际购买意向和价格敏感度。
+  - 经营影响：库存积压，占用流动资金；品牌心智从“贵重材质”向“快时尚配饰”偏移，削弱高客单转化能力。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：CN_ecommerce_c7f941bc1c674dbb9987285e / wholesalejewelrywebsite.com / available
+- risk_02
+  - 市场：中国
+  - 风险：将实验室培育钻石作为独立创新品类投入，但供应链尚未与头部生产商锁定长期协议，若市场批发价继续以每年15%–20%下跌，新品上市即面临价格倒挂，且会进一步拉低消费者对天然钻石产品线的价值认同。需人工核实培育钻石未来12个月的供需缺口及定价走势。
+  - 经营影响：毛利快速收窄，天然钻石客单价可能被连带质疑，品牌高端形象受损。
+  - 建议责任：总部+区域
+  - 优先级：P0
+  - 证据：CN_ecommerce_140876f3d0d4b07cc5360554 / southernjewelrynews.com / available
+- risk_03
+  - 市场：新加坡
+  - 风险：在线上旗舰店部署AR虚拟试戴作为差异化体验，但内部缺乏珠宝3D建模与实时渲染的技术积累，可能导致模型色彩偏差、尺寸比例失真，用户试戴后预期与实物差距过大，引发集中退货和社交媒体负面传播。需人工评估现有技术团队能否在三个月内产出符合珠宝级精度的AR素材。
+  - 经营影响：退货率上升侵蚀转化利润，客服压力增大，线上净推荐值（NPS）滑坡。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：SG_ecommerce_50bd672fe7ab28c9ecba836d / branvas.com / available
+- risk_04
+  - 市场：美国
+  - 风险：看到Chow Tai Fook推出家居装饰线后，考虑效仿延伸至生活方式品类以打造新增长曲线，但本品牌在珠宝以外的供应链资源和品牌联想均不具备基础，贸然进入将分散珠宝主业的研发与营销投入，并让消费者对品牌专业度产生混淆。需人工论证品牌延伸的可行性边界和最小可行产品（MVP）定义。
+  - 经营影响：品牌心智被稀释，珠宝核心品类市场份额可能遭到垂直品牌侵蚀，新业务试错成本挤压整体预算。
+  - 建议责任：总部
+  - 优先级：P0
+  - 证据：US_competitors_06e562aaf6659d5524ee8d40 / eqs-news.com / available
+- risk_05
+  - 市场：美国
+  - 风险：美国站过半销量依赖亚马逊FBA，2026年履单费调整后，小件珠宝的平均配送成本上升约8%–12%，若维持现有售价和推广力度，部分长尾SKU将出现毛利为负。需人工核实所有受影响SKU的费用变化明细，并测算维持Prime标识的必要性与成本。
+  - 经营影响：渠道毛利率下降，低客单价商品面临砍SKU或提价后的流量下滑。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：US_ecommerce_f775cf7de217afe4b63b382b / sellercentral.amazon.com / available
+- risk_06
+  - 市场：日本
+  - 风险：美国对日本产钢铁、铝衍生品加征50%关税，若品牌从日本采购K金链条或金属部件并转运至美国市场，到岸成本将激增，现有供应链报价协议中未包含关税波动条款，可能导致美国订单越卖越亏。需人工排摸所有经日本采购并销往美国的物料清单，确认HS编码覆盖范围。
+  - 经营影响：供应链成本失控，美国市场黄金类饰品的价格竞争力丧失，可能被迫提价或退出部分渠道。
+  - 建议责任：总部
+  - 优先级：P0
+  - 证据：JP_compliance_5178d40fd6caea37a8b044ae / global-scm.com / available
+- risk_07
+  - 市场：泰国
+  - 风险：Chow Tai Fook 在曼谷Siam Paragon开设旗舰店，利用其全球代言人及本地化设计直接抢夺高端客流，而本品牌在泰国仅靠经销商投放，若半年内无应对策略，可能被挤出主流商场最佳位置，丧失中产及以上客群的心智份额。需人工调研竞品门店客流转化数据及本地合作伙伴谈判空间。
+  - 经营影响：泰国市场到店流量和转化率下降，渠道伙伴信心动摇，可能导致合约条款恶化。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：TH_competitors_2345749cf882da8aa201812a / businesstimes.com.sg / available
+- risk_08
+  - 市场：中国
+  - 风险：创新资源过度向前沿材质和数字体验倾斜，导致婚嫁、春节等传统产品线迭代延迟，六福珠宝等竞品已发布紧扣节庆的IP联名系列，若本品牌在关键送礼节点无法推出有竞争力的新品，将丢失线下伴手礼场景的刚性需求。需人工盘点下半年核心产品线的开发进度及竞品上市节奏。
+  - 经营影响：节庆销售高峰期间市场份额流失，品牌在婚嫁和礼赠场景的必选性降低。
+  - 建议责任：总部+区域
+  - 优先级：P0
+  - 证据：CN_competitors_87d42c7072bb21bf06f67ce9 / lukfook.com / available
+- risk_09
+  - 市场：泰国
+  - 风险：为响应可持续消费呼声而主推回收贵金属或培育钻石，但上游供应商无法出具区块链溯源证书或再生含量证明，线上详情页的环保声明将面临被平台判定为虚假宣传的风险，且一旦被消费者拆穿，将引发“漂绿”舆情。需人工审核目标供应商的GRS/RJC等认证状态及物料溯源链条。
+  - 经营影响：品牌声誉受损，可能被电商平台限流或下架，环保型溢价消失。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：TH_ecommerce_c3357d7b83824d37f25b4e7f / gabrielfinejewelers.com / available
+- risk_10
+  - 市场：日本
+  - 风险：创新系列沿用国内通用材质，未针对日本市场强制执行镍无添加、钴不释放等过敏原控制，商品标题和详情页中缺乏「ニッケルフリー」「サージカルステンレス」等关键词，将被乐天、亚马逊的搜索算法过滤，致使新品曝光断崖式下滑，即使加大广告投入也无法挽回流量。需人工核查所有进口SKU的素材检测报告和标签合规性。
+  - 经营影响：日本站免费流量和付费流量效率齐降，转化率和客单价双杀，退货率上升。
+  - 建议责任：区域
+  - 优先级：P0
+  - 证据：JP_compliance_c23344d7a4bfcfe143cd76b1 / giant-starlly.com / available
+
+## 五、今日建议动作
+- A-01
+  - 责任类型：总部+区域
+  - 建议负责人：建议负责人：产品总监、日本区域经理
+  - 市场：日本
+  - 时限：推定时限：2026年7月前完成样品池
+  - 动作：开发并上线基于‘第二皮肤’概念的防过敏金属系列（耳环、项链），不少于5个SKU，并监控‘つけっぱなし’相关搜索词点击率。
+  - 复核口径：上线30天内自然搜索词点击率高于平均值10%，且无严重品质退货。
+  - 依据：该趋势在乐天市场排名已验证，创新点在于磁石扣合与医用材料，可差异化。
+  - 状态：待人工确认
+- A-02
+  - 责任类型：区域
+  - 建议负责人：建议负责人：韩国电商运营
+  - 市场：韩国
+  - 时限：推定时限：2026年Q3前完成A/B测试
+  - 动作：与Coupang合作或使用第三方AR工具，对一款新品戒指进行虚拟试戴 vs 静态图的A/B测试，跟踪转化与退货率。
+  - 复核口径：AR组转化率显著高于对照组（p<0.1），且退货率不上升。
+  - 依据：VR/AR技术可降低饰品网购障碍，但需本地验证。
+  - 状态：待人工确认
+- A-03
+  - 责任类型：总部
+  - 建议负责人：建议负责人：品牌经理、设计师
+  - 市场：中国、美国
+  - 时限：推定时限：2026年8月推出设计稿
+  - 动作：启动中性化珠宝设计工作坊，产出至少3个概念系列，并通过DTC官网预售测试用户反响。
+  - 复核口径：预售转化率>2%且客单中位价符合中高端定位。
+  - 依据：趋势报告多次强调，尽早占领用户心智。
+  - 状态：待人工确认
+- A-04
+  - 责任类型：区域
+  - 建议负责人：建议负责人：越南市场主管
+  - 市场：越南
+  - 时限：推定时限：2026年Q3启动试点
+  - 动作：签约5-10名微观时尚KOL，以‘日常叙事’方式推广新材质配饰，并设置专属折扣码追踪。
+  - 复核口径：KOL内容总曝光>50万，专属码使用次数>100。
+  - 依据：越南消费者对影响者推荐信赖度高，适合低成本冷启动。
+  - 状态：待人工确认
+- A-05
+  - 责任类型：总部
+  - 建议负责人：建议负责人：供应链主管
+  - 市场：日本、中国
+  - 时限：推定时限：2026年9月前完成样品测试
+  - 动作：联系3家树脂与木材饰品供应商，打样并测试耐久性与过敏性，建立新材料准入标准。
+  - 复核口径：样品通过内部拉力测试与防过敏认证，且单价可控。
+  - 依据：为2027年春夏上架做准备。
+  - 状态：待人工确认
+- A-06
+  - 责任类型：总部+区域
+  - 建议负责人：建议负责人：电商总监
+  - 市场：美国、日本
+  - 时限：推定时限：2026年7月前
+  - 动作：梳理Amazon最新首饰合规要求，完成现有产品检测文件更新，并为新品开发设置合规预审流。
+  - 复核口径：在下一季度无因合规导致的 listing 下架事件。
+  - 依据：避免因政策突击导致新品无法按时上架。
+  - 状态：待人工确认
+
+## 六、后续观察清单
+- WL001
+  - 市场：中国
+  - 观察重点：实验室培育钻石作为独立品类的消费者认知与内容营销策略
+  - 触发条件：当电商平台培育钻石品类搜索量环比增长超过20%，或3家以上主要竞品推出培育钻石专属系列时，启动培育钻石独立页面A/B测试与内容实验
+  - 证据：CN_ecommerce_140876f3d0d4b07cc5360554 / southernjewelrynews.com / URL有效
+- WL002
+  - 市场：新加坡
+  - 观察重点：AR虚拟试戴功能在东南亚珠宝线上销售中的转化率提升效果
+  - 触发条件：当新加坡或马来西亚珠宝品类AR试戴功能使转化率提升超过15%（A/B测试数据），或主要竞品推出AR试戴并形成用户增长时，启动AR试戴MVP开发
+  - 证据：SG_ecommerce_50bd672fe7ab28c9ecba836d / branvas.com / URL有效
+- WL003
+  - 市场：日本
+  - 观察重点：24小时佩戴场景下的无过敏、无针式耳饰与金属过敏对应材料的商品化机会
+  - 触发条件：当公司日本向け基本款耳饰退货理由中「佩戴不适/过敏」占比超过8%时，启动无针式耳饰和不锈钢/钛材质小样试产，并在乐天进行需求验证A/B测试
+  - 证据：JP_compliance_c23344d7a4bfcfe143cd76b1 / giant-starlly.com / URL有效
+- WL004
+  - 市场：中国
+  - 观察重点：可持续材料（回收贵金属、实验室钻石）在年轻客群中的接受度与概念验证
+  - 触发条件：当社交媒体上#labgrowndiamond或#recycledgold话题月均讨论量增长50%，且至少2家竞品推出可持续材料系列时，启动绿色珠宝样品池构建和概念验证内容实验
+  - 证据：CN_market_trends_805f148c9d00d453f396ab54 / gabrielny.com / URL有效
+- WL005
+  - 市场：中国
+  - 观察重点：幽默、超大号、食玩风格首饰的社交媒体内容范式与病毒式传播潜力
+  - 触发条件：当TikTok/Red上#funjewelry或#statementjewelry标签内容互动率高于品牌现有内容2倍时，启动幽默/美食/超大号系列内容实验，3个月内追踪UGC数量和转化率
+  - 证据：CN_market_trends_fad4dc74bc23db3672ccb4f4 / vogue.com / URL有效
+- WL006
+  - 市场：中国
+  - 观察重点：黄金珠宝的投资属性强化与回购便利化对产品设计的影响
+  - 触发条件：当内部调研中购买黄金珠宝时考虑「保值」的受访者比例连续两季度超过50%，或金价突破历史高点持续一个月，启动可回购/易变现黄金首饰试点
+  - 证据：CN_market_trends_632d45f5705a9861dc222d1c / gold.org / URL有效
+- WL007
+  - 市场：中国
+  - 观察重点：无性别珠宝与男性珠宝在线上渠道的搜索增长和销售潜力
+  - 触发条件：当公司网站男性珠宝或无性别分类的访问量连续2个月环比增长超过30%，或竞品品牌推出男性珠宝线并获得显著媒体曝光时，启动男性/无性别珠宝小批量试销MVP
+  - 证据：CN_ecommerce_140876f3d0d4b07cc5360554 / southernjewelrynews.com / URL有效
+- WL008
+  - 市场：日本
+  - 观察重点：日本Amazon费用调整后低毛利SKU通过包装优化与组合销售实现的利润结构创新
+  - 触发条件：当日本站珠宝品类FBA费用下降使得特定SKU毛利率提高超过3个百分点时，启动包装优化+组合销售A/B测试，并监控竞品跟进情况
+  - 证据：JP_ecommerce_ece0bcfa25080451faf58c5c / forestshipping.com / URL有效
+
+## 七、证据追溯
+- E-01
+- CN_compliance_7a077c46a3685d2923828a8d
+  - 市场：中国
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- CN_compliance_aggregate
+  - 市场：中国
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- JP_compliance_3848bc8044f267d6138ab1ec
+  - 市场：日本
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- JP_compliance_2fd69b66465a011ef467cadb
+  - 市场：日本
+  - 来源：gtaic.ai
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026 Japan Other precious metal jewellery and parts sector short-term and long-term developments & trade possibilities and limitations / 优先级=P0 / 责任类型=总部
+- JP_compliance_5178d40fd6caea37a8b044ae
+  - 市场：日本
+  - 来源：global-scm.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026年3月4日時点における、米国の輸入関税の国別状況 – コンサルタントの独り言 / 优先级=P0 / 责任类型=总部
+- JP_compliance_4cdb6e6a725e0bda347c4cdb
+  - 市场：日本
+  - 来源：ops-official.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026年のトレンドは? 大人の"存在感"ジュエリー - Ops. Journal / 优先级=P0 / 责任类型=总部
+- JP_compliance_b3429a9a36f32f1bbbd98223
+  - 市场：日本
+  - 来源：www.youtube.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026年３月香港ジュエリーフェアVol２ ジュエリー編 / 优先级=P0 / 责任类型=总部
+- JP_compliance_c23344d7a4bfcfe143cd76b1
+  - 市场：日本
+  - 来源：giant-starlly.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026春夏 日本アクセサリー市場 トレンド深度分析＆戦略レポート / 3-6月期 / 优先级=P0 / 责任类型=总部
+- JP_compliance_aggregate
+  - 市场：日本
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自71条SQLite记录 / 优先级=P0 / 责任类型=总部
+- KR_compliance_42714b8067145ca36d43d7c1
+  - 市场：韩国
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- KR_compliance_aggregate
+  - 市场：韩国
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- US_compliance_8e727114c0c56b14c3bfaa40
+  - 市场：美国
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- US_compliance_aggregate
+  - 市场：美国
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- SG_compliance_f7eeee1fab321910505ab4d5
+  - 市场：新加坡
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- SG_compliance_aggregate
+  - 市场：新加坡
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- MY_compliance_1520eaa4afcfcd05870ba425
+  - 市场：马来西亚
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- MY_compliance_aggregate
+  - 市场：马来西亚
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- TH_compliance_79c6a21611fbfab7970b7d47
+  - 市场：泰国
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- TH_compliance_aggregate
+  - 市场：泰国
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- VN_compliance_358bc83f28d9cd8c16324a03
+  - 市场：越南
+  - 来源：OFAC
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：SDN名单快照 / 优先级=P0 / 责任类型=总部
+- VN_compliance_aggregate
+  - 市场：越南
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：合规/监管聚合信号，来自1条SQLite记录 / 优先级=P0 / 责任类型=总部
+- CN_ecommerce_c7f941bc1c674dbb9987285e
+  - 市场：中国
+  - 来源：wholesalejewelrywebsite.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026 Jewelry Trends / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_140876f3d0d4b07cc5360554
+  - 市场：中国
+  - 来源：southernjewelrynews.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026 Jewelry Trends Everyone Will Be Talking About / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_e82f0cff441341081f48af20
+  - 市场：中国
+  - 来源：storyandrain.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026's New Jewelry Rules / Story + Rain / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_ca5fd3dd9b0fc51998d4c76f
+  - 市场：中国
+  - 来源：www.elle.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：4 Jewelry Trends Fashion Girls Are Wearing in 2026 - ELLE / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_092be8659fc4dea520d8d58b
+  - 市场：中国
+  - 来源：www.glamour.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：5 Spring Jewelry Trends Fashion Insiders Are Wearing for 2026 / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_678cbba21b69087d8f9061cc
+  - 市场：中国
+  - 来源：www.ucfs.net
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：5 Trends Shaping the Jewelry Industry and Market Outlook in 2026 / 优先级=P0 / 责任类型=区域
+- CN_ecommerce_aggregate
+  - 市场：中国
+  - 来源：data_extractor_sqlite_aggregate
+  - URL状态：URL缺失
+  - 证据等级：B
+  - 说明：电商平台聚合信号，来自200条SQLite记录 / 优先级=P0 / 责任类型=区域
+- JP_ecommerce_275723b5981d217b0dbb1c04
+  - 市场：日本
+  - 来源：global.rakuten.com
+  - URL状态：URL完整
+  - 证据等级：A
+  - 说明：2026 Events & Updates / Rakuten Group, Inc. / 优先级=P0 / 责任类型=区域
+
+## 八、不确定性与人工确认
+- U-01
+  - 说明：1. 培育钻石产品线对现有品牌形象的潜在负面影响尚未量化；2. AR虚拟试戴技术的用户接受度与效果存在跨市场差异；3. 新材料（树脂、木材）供应链的稳定性和质量一致性未经验证；4. 日本‘第二皮肤’趋势的持续性与竞争响应速度不确定；5. 越南社交电商试点中KOL选择的匹配度与转化率需实际测试；6. 平台政策（Amazon、Coupang）的后续变化可能影响合规成本。

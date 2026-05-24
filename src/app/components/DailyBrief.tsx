@@ -1,91 +1,105 @@
 import { motion } from "motion/react";
-import { TrendingUp, TrendingDown, Minus, Calendar, ExternalLink } from "lucide-react";
+import { TrendingUp, TrendingDown, Minus, Calendar } from "lucide-react";
 import type { StrategyMode } from "./StrategyModeSelector";
-import { opportunities, risks, keyChanges, recommendedActions, watchList, decisionSummary, marketPriorities } from "../data/strategyData";
+import { getStrategyData } from "../data/strategyData";
 
 interface DailyBriefProps {
   mode: StrategyMode;
   onInsightClick: (insight: any) => void;
 }
 
-// 从 strategyData.ts 提取简报数据（数据来源：data extratcor / collected.db）
-const briefData = {
-  innovation: {
-    title: "创新突破态势 — 每日跨市场运营决策简报",
-    insights: [
-      {
-        label: "P0 机会数",
-        value: `${opportunities.filter(o => o.priority === "P0").length} 个`,
-        trend: "up",
-        change: `${opportunities.length} 项机会已识别`,
-      },
-      {
-        label: "市场覆盖",
-        value: `${marketPriorities.length} 个市场`,
-        trend: "up",
-        change: `美国市场 ${marketPriorities[0]?.priority || "P0"} 级优先`,
-      },
-      {
-        label: "今日建议动作",
-        value: `${recommendedActions.length} 项`,
-        trend: "up",
-        change: `${recommendedActions.filter(a => a.deadline.includes("24小时") || a.deadline.includes("本周")).length} 项紧急`,
-      },
-    ],
-    summary: `${decisionSummary[0]} ${decisionSummary[1]}`,
-  },
-  stable: {
-    title: "稳定运营概况 — 每日跨市场运营决策简报",
-    insights: [
-      {
-        label: "风险监控项",
-        value: `${risks.length} 个`,
-        trend: "down",
-        change: `${risks.filter(r => r.priority === "P0").length} 个 P0 风险`,
-      },
-      {
-        label: "后续观察清单",
-        value: `${watchList.length} 项`,
-        trend: "neutral",
-        change: `美国市场持续监控`,
-      },
-      {
-        label: "证据完整性",
-        value: `${10} 条记录`,
-        trend: "up",
-        change: `Primary API + Tavily 双源`,
-      },
-    ],
-    summary: `${decisionSummary[2]} ${decisionSummary[3]}`,
-  },
-  rescue: {
-    title: "危机应对分析 — 每日跨市场运营决策简报",
-    insights: [
-      {
-        label: "P0 风险点",
-        value: `${risks.filter(r => r.priority === "P0").length} 个需关注`,
-        trend: "down",
-        change: `${risks.filter(r => r.responsibility === "总部").length} 个总部级`,
-      },
-      {
-        label: "竞争压力",
-        value: "培育钻石替代加速",
-        trend: "down",
-        change: `CAGR 13.42% 侵蚀天然钻`,
-      },
-      {
-        label: "合规告警",
-        value: "Amazon 珠宝合规",
-        trend: "down",
-        change: "未合规面临下架风险",
-      },
-    ],
-    summary: risks.map(r => `${r.market}: ${r.risk}`).slice(0, 3).join(" "),
-  },
-};
+// 从 strategyData.ts 提取简报数据
+function getBriefData(mode: StrategyMode) {
+  const data = getStrategyData(mode);
+  const { opportunities, risks, recommendedActions, watchList, decisionSummary, marketPriorities } = data;
+
+  switch (mode) {
+    case "innovation":
+      return {
+        title: "创新突破态势 — 每日跨市场运营决策简报",
+        insights: [
+          {
+            label: "P0 机会数",
+            value: `${opportunities.filter(o => o.priority === "P0").length} 个`,
+            trend: "up",
+            change: `${opportunities.length} 项机会已识别`,
+          },
+          {
+            label: "市场覆盖",
+            value: `${marketPriorities.length} 个市场`,
+            trend: "up",
+            change: `${marketPriorities[0]?.market || "日本"}市场 ${marketPriorities[0]?.priority || "P0"} 级优先`,
+          },
+          {
+            label: "今日建议动作",
+            value: `${recommendedActions.length} 项`,
+            trend: "up",
+            change: `${recommendedActions.length} 项待执行`,
+          },
+        ],
+        summary: `${decisionSummary[0]}`,
+      };
+    case "stable":
+      return {
+        title: "稳定运营概况 — 每日跨市场运营决策简报",
+        insights: [
+          {
+            label: "风险监控项",
+            value: `${risks.length} 个`,
+            trend: "down",
+            change: `${risks.filter(r => r.priority === "P0").length} 个 P0 风险`,
+          },
+          {
+            label: "后续观察清单",
+            value: `${watchList.length} 项`,
+            trend: "neutral",
+            change: `持续监控各市场`,
+          },
+          {
+            label: "建议动作",
+            value: `${recommendedActions.length} 项`,
+            trend: "up",
+            change: `${recommendedActions.filter(a => a.deadline.includes("本周")).length} 项紧急`,
+          },
+        ],
+        summary: `${decisionSummary[0]}`,
+      };
+    case "rescue":
+      return {
+        title: "战略转型分析 — 每日跨市场运营决策简报",
+        insights: [
+          {
+            label: "P0 风险点",
+            value: `${risks.filter(r => r.priority === "P0").length} 个需关注`,
+            trend: "down",
+            change: `${risks.filter(r => r.responsibility === "总部").length} 个总部级`,
+          },
+          {
+            label: "竞争压力",
+            value: "CTF全球扩张",
+            trend: "down",
+            change: `多市场竞品升级`,
+          },
+          {
+            label: "转型动作",
+            value: `${recommendedActions.length} 项`,
+            trend: "up",
+            change: `产品/渠道/供应链`,
+          },
+        ],
+        summary: risks.map(r => `${r.market}: ${r.risk}`).slice(0, 3).join(" "),
+      };
+    default:
+      return {
+        title: "每日跨市场运营决策简报",
+        insights: [],
+        summary: "",
+      };
+  }
+}
 
 export function DailyBrief({ mode, onInsightClick }: DailyBriefProps) {
-  const data = briefData[mode];
+  const data = getBriefData(mode);
   const today = new Date().toLocaleDateString("zh-CN", {
     year: "numeric",
     month: "long",
@@ -153,7 +167,7 @@ export function DailyBrief({ mode, onInsightClick }: DailyBriefProps) {
         </div>
 
         <div className="grid grid-cols-3 gap-6">
-          {data.insights.map((insight, index) => (
+          {data.insights.map((insight: any, index: number) => (
             <motion.button
               key={insight.label}
               initial={{ opacity: 0, y: 30, scale: 0.9 }}
@@ -200,51 +214,13 @@ export function DailyBrief({ mode, onInsightClick }: DailyBriefProps) {
                 >
                   {insight.value}
                 </motion.div>
-                <div className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium ${
-                  insight.trend === "up"
-                    ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
-                    : insight.trend === "down"
-                    ? "bg-rose-100 text-rose-700 border border-rose-200"
-                    : "bg-amber-100 text-amber-700 border border-amber-200"
-                }`}>
-                  {insight.change}
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-amber-600">{insight.change}</span>
                 </div>
-                <div className="mt-4 pt-4 border-t border-amber-200/50">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-amber-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                      点击查看关联分析
-                    </span>
-                    <ExternalLink className="size-4 text-amber-600 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                </div>
-                <motion.div
-                  className="absolute inset-0 rounded-2xl border-2 border-amber-400/0 group-hover:border-amber-400/50 transition-all duration-300"
-                  animate={{
-                    borderColor: ["rgba(251, 191, 36, 0)", "rgba(251, 191, 36, 0.3)", "rgba(251, 191, 36, 0)"],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                  }}
-                />
               </div>
             </motion.button>
           ))}
         </div>
-
-        {/* 简报摘要 */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-6 p-6 rounded-2xl border border-amber-200/40 bg-gradient-to-r from-amber-50/50 to-rose-50/50"
-        >
-          <div className="flex items-center gap-3 mb-3">
-            <div className="size-2 rounded-full bg-amber-400" />
-            <span className="text-sm font-medium text-amber-800">策略简报摘要</span>
-          </div>
-          <p className="text-amber-700 leading-relaxed">{data.summary}</p>
-        </motion.div>
       </div>
     </div>
   );

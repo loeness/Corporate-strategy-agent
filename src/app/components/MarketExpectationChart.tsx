@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
 import { TrendingUp, TrendingDown, Target } from "lucide-react";
 import type { StrategyMode } from "./StrategyModeSelector";
-import { marketPriorities, type MarketPriority } from "../data/strategyData";
+import { getStrategyData, type MarketPriority } from "../data/strategyData";
 
 interface MarketExpectationChartProps {
   mode: StrategyMode;
@@ -20,21 +20,19 @@ const colorMap: Record<string, string> = {
 };
 
 // 基于市场优先级数据构建图表数据
-function buildMarketChartData() {
+function buildMarketChartData(marketPriorities: MarketPriority[]) {
   return marketPriorities.map((m) => {
-    // 根据优先级分配 value（相对权重）
-    const valueMap: Record<string, number> = {
-      P1: m.rank <= 3 ? 30 - (m.rank - 1) * 3 : 15,
-    };
-    const value = m.priority === "P1" ? [32, 28, 25, 15, 12, 10, 8, 5][m.rank - 1] || 8 : 8;
+    const value = m.priority === "P0" ? [32, 28, 25, 15, 12, 10, 8, 5][m.rank - 1] || 8 : m.priority === "P1" ? [22, 18, 15, 12, 10, 8, 5, 3][m.rank - 1] || 5 : 5;
 
     const trendMap: Record<string, string> = {
-      P1: "up",
+      P0: "up",
+      P1: m.rank <= 3 ? "up" : "neutral",
       P2: m.rank <= 5 ? "neutral" : "down",
     };
 
     const recommendationMap: Record<string, string> = {
-      P1: "加大投入",
+      P0: "加大投入",
+      P1: m.rank <= 3 ? "加大投入" : "保持关注",
       P2: m.rank <= 5 ? "保持关注" : "适度观望",
     };
 
@@ -42,7 +40,7 @@ function buildMarketChartData() {
       region: m.market,
       value,
       trend: trendMap[m.priority] || "neutral",
-      change: m.priority === "P1" ? `P1 优先` : `P2 第${m.rank}位`,
+      change: m.priority === "P0" ? `P0 优先` : m.priority === "P1" ? `P1 第${m.rank}位` : `P2 第${m.rank}位`,
       recommendation: recommendationMap[m.priority] || "观察",
       color: colorMap[m.market] || "#d4af37",
       description: m.judgment.slice(0, 40) + "...",
@@ -50,26 +48,32 @@ function buildMarketChartData() {
   });
 }
 
-const marketDataByMode: Record<StrategyMode, any[]> = {
-  innovation: buildMarketChartData(),
-  stable: buildMarketChartData().map((d) => ({
-    ...d,
-    value: d.value,
-    description:
-      marketPriorities.find((m) => m.market === d.region)?.judgment.slice(0, 40) + "...",
-  })),
-  rescue: buildMarketChartData().map((d) => {
-    const mp = marketPriorities.find((m) => m.market === d.region);
-    return {
-      ...d,
-      trend: mp?.priority === "P1" ? "neutral" : "down",
-      change: mp?.priority === "P1" ? "需守住" : "关注风险",
-    };
-  }),
-};
+function buildMarketDataByMode(mode: StrategyMode) {
+  const data = getStrategyData(mode);
+  const { marketPriorities } = data;
+  const baseData = buildMarketChartData(marketPriorities);
+
+  switch (mode) {
+    case "innovation":
+      return baseData;
+    case "stable":
+      return baseData;
+    case "rescue":
+      return baseData.map((d) => {
+        const mp = marketPriorities.find((m) => m.market === d.region);
+        return {
+          ...d,
+          trend: mp?.priority === "P0" ? "neutral" : "down",
+          change: mp?.priority === "P0" ? "需守住" : "关注风险",
+        };
+      });
+    default:
+      return baseData;
+  }
+}
 
 export function MarketExpectationChart({ mode }: MarketExpectationChartProps) {
-  const data = marketDataByMode[mode];
+  const data = buildMarketDataByMode(mode);
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload[0]) {
