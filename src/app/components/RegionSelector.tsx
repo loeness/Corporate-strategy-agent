@@ -4,7 +4,7 @@ import { Globe, ChevronDown, Check } from "lucide-react";
 import { useRegion, regionConfig, type Region } from "../contexts/RegionContext";
 
 export function RegionSelector() {
-  const { currentRegion, setCurrentRegion, setIsLoading } = useRegion();
+  const { currentRegion, setCurrentRegion, setTargetRegion, setIsLoading } = useRegion();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleRegionChange = async (region: Region) => {
@@ -14,12 +14,15 @@ export function RegionSelector() {
     }
 
     setIsOpen(false);
+    // ★ 点击瞬间立即将目标地区写入 targetRegion，Loading 弹窗将读取此值
+    setTargetRegion(region);
     setIsLoading(true);
 
-    // 模拟数据加载延迟
+    // 模拟数据加载延迟（实际项目中替换为 API 调用）
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     setCurrentRegion(region);
+    setTargetRegion(null); // 切换完成，清除目标状态
     setIsLoading(false);
   };
 

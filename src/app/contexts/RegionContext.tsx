@@ -68,6 +68,8 @@ export const regionConfig = {
 interface RegionContextType {
   currentRegion: Region;
   setCurrentRegion: (region: Region) => void;
+  targetRegion: Region | null;
+  setTargetRegion: (region: Region | null) => void;
   isLoading: boolean;
   setIsLoading: (loading: boolean) => void;
   getRegionConfig: () => typeof regionConfig[Region];
@@ -77,6 +79,7 @@ const RegionContext = createContext<RegionContextType | undefined>(undefined);
 
 export function RegionProvider({ children }: { children: ReactNode }) {
   const [currentRegion, setCurrentRegion] = useState<Region>("global");
+  const [targetRegion, setTargetRegion] = useState<Region | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
   const getRegionConfig = () => regionConfig[currentRegion];
@@ -86,6 +89,8 @@ export function RegionProvider({ children }: { children: ReactNode }) {
       value={{
         currentRegion,
         setCurrentRegion,
+        targetRegion,
+        setTargetRegion,
         isLoading,
         setIsLoading,
         getRegionConfig,

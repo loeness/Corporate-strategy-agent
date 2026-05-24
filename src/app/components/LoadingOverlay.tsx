@@ -3,9 +3,12 @@ import { Loader2, Globe } from "lucide-react";
 import { useRegion, regionConfig } from "../contexts/RegionContext";
 
 export function LoadingOverlay() {
-  const { isLoading, currentRegion } = useRegion();
+  const { isLoading, currentRegion, targetRegion } = useRegion();
 
   if (!isLoading) return null;
+
+  // ★ 优先读取 targetRegion（用户点击的目标），fallback 到 currentRegion
+  const displayRegion = targetRegion || currentRegion;
 
   return (
     <motion.div
@@ -43,7 +46,7 @@ export function LoadingOverlay() {
 
           <h3 className="text-2xl font-medium text-amber-900 mb-3 flex items-center justify-center gap-2">
             <Globe className="size-6" />
-            即将切换到「{regionConfig[currentRegion].label}」
+            即将切换到「{regionConfig[displayRegion].label}」
           </h3>
           <p className="text-amber-700/80 mb-6">
             正在为您重新生成定制化战略报告
