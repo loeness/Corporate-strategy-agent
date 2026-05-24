@@ -23,7 +23,7 @@ function buildBrief(mode: StrategyMode, region: string) {
     const topMarkets = marketPriorities.filter((m) => m.priority === "P1").map((m) => m.market);
     return {
       title: "全球跨市场战略简报",
-      summary: decisionSummary.join(" "),
+      summary: decisionSummary,
       keyInsights: [
         {
           label: "P1 优先市场",
@@ -128,8 +128,13 @@ export function StrategicBriefCard({ mode }: StrategicBriefCardProps) {
         </div>
 
         {/* 摘要 */}
-        <div className="p-5 mb-6 rounded-2xl bg-gradient-to-r from-amber-100/40 to-rose-100/40 border border-amber-200/30">
-          <p className="text-amber-800 leading-relaxed">{brief.summary}</p>
+        <div className="p-5 mb-6 rounded-2xl bg-gradient-to-r from-amber-100/40 to-rose-100/40 border border-amber-200/30 space-y-2">
+          {brief.summary.map((item, i) => (
+            <div key={i} className="flex items-start gap-2">
+              <span className="flex-shrink-0 size-5 rounded-full bg-amber-200 text-amber-700 text-xs flex items-center justify-center mt-0.5">{i+1}</span>
+              <p className="text-amber-800 leading-relaxed">{item}</p>
+            </div>
+          ))}
         </div>
 
         {/* 关键洞察 — 数字展示 */}
